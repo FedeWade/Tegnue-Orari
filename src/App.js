@@ -10,6 +10,7 @@ class App extends React.Component {
     this.state = {
       currentItem: "",
       username: "",
+      items: [],
     };
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -32,6 +33,24 @@ class App extends React.Component {
     this.setState({
       currentItem: "",
       username: "",
+    });
+  }
+
+  componentDidMount() {
+    const itemsRef = firebase.database().ref("items");
+    itemsRef.on("value", (snapshot) => {
+      let items = snapshot.val();
+      let newState = [];
+      for (let item in items) {
+        newState.push({
+          id: item,
+          title: items[item].title,
+          user: items[item].user,
+        });
+      }
+      this.setState({
+        items: newState,
+      });
     });
   }
 
@@ -95,6 +114,21 @@ class App extends React.Component {
             </div>
           </section>
         </div>
+
+        <section className="display-item">
+          <div className="wrapper">
+            <ul>
+              {this.state.items.map((item) => {
+                return (
+                  <li key={item.id}>
+                    <h3>{item.title}</h3>
+                    <p>brought by: {item.user}</p>
+                  </li>
+                );
+              })}
+            </ul>
+          </div>
+        </section>
       </div>
     );
   }
