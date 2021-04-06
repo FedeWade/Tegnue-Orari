@@ -1,7 +1,6 @@
 import "./App.css";
 import Employee from "./Components/Employee";
 import firebase from "firebase";
-import Sprint from "./Sprint";
 
 import React from "react";
 
@@ -9,32 +8,8 @@ class App extends React.Component {
   constructor() {
     super();
     this.state = {
-      currentItem: "",
-      username: "",
       sprints: [],
     };
-    this.handleChange = this.handleChange.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
-  }
-
-  handleChange(e) {
-    this.setState({
-      [e.target.name]: e.target.value,
-    });
-  }
-
-  handleSubmit(e) {
-    e.preventDefault();
-    const itemsRef = firebase.database().ref("items");
-    const item = {
-      title: this.state.currentItem,
-      user: this.state.username,
-    };
-    itemsRef.push(item);
-    this.setState({
-      currentItem: "",
-      username: "",
-    });
   }
 
   componentDidMount() {
@@ -44,8 +19,7 @@ class App extends React.Component {
       let newState = [];
       for (let sprint in sprints) {
         newState.push({
-          id: sprint,
-          day: sprints[sprint].day,
+          day: sprint,
           waiter: sprints[sprint].waiter,
           hour: sprints[sprint].hour,
         });
@@ -85,46 +59,14 @@ class App extends React.Component {
 
     return (
       <div className="app">
-        <header>
-          <div className="wrapper">
-            <h1>Fun Food Friends</h1>
-          </div>
-        </header>
-        <div className="container">
-          <section className="add-item">
-            <form onSubmit={this.handleSubmit}>
-              <input
-                type="text"
-                name="username"
-                placeholder="What's your name?"
-                onChange={this.handleChange}
-                value={this.state.username}
-              />
-              <input
-                type="text"
-                name="currentItem"
-                placeholder="What are you bringing?"
-                onChange={this.handleChange}
-                value={this.state.currentItem}
-              />
-              <button>Add Item</button>
-            </form>
-          </section>
-          <section className="display-item">
-            <div className="wrapper">
-              <ul></ul>
-            </div>
-          </section>
-        </div>
-
         <section className="display-item">
           <div className="wrapper">
+            <h2>Lunedi</h2>
             <ul>
               {this.state.sprints.map((sprint) => {
                 return (
                   <li key={sprint.id}>
                     <h3>{sprint.waiter}</h3>
-                    <p>day: {sprint.day}</p>
                     <p>hour: {sprint.hour}</p>
                   </li>
                 );
