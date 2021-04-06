@@ -11,7 +11,7 @@ class App extends React.Component {
     this.state = {
       currentItem: "",
       username: "",
-      items: [],
+      sprints: [],
     };
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -38,19 +38,20 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-    const itemsRef = firebase.database().ref("items");
-    itemsRef.on("value", (snapshot) => {
-      let items = snapshot.val();
+    const sprintsRef = firebase.database().ref("lunedi");
+    sprintsRef.on("value", (snapshot) => {
+      let sprints = snapshot.val();
       let newState = [];
-      for (let item in items) {
+      for (let sprint in sprints) {
         newState.push({
-          id: item,
-          title: items[item].title,
-          user: items[item].user,
+          id: sprint,
+          day: sprints[sprint].day,
+          waiter: sprints[sprint].waiter,
+          hour: sprints[sprint].hour,
         });
       }
       this.setState({
-        items: newState,
+        sprints: newState,
       });
     });
   }
@@ -82,14 +83,8 @@ class App extends React.Component {
       new Date().setDate(currentDayOfMonth + (6 - currentDayOfWeek))
     );
 
-    let sprintTest = new Sprint("fede", 8, 4, 1200);
-
     return (
       <div className="app">
-        <p>
-          {sprintTest.waiter}, {sprintTest.day}, {sprintTest.month},
-          {sprintTest.hour}
-        </p>
         <header>
           <div className="wrapper">
             <h1>Fun Food Friends</h1>
@@ -125,11 +120,12 @@ class App extends React.Component {
         <section className="display-item">
           <div className="wrapper">
             <ul>
-              {this.state.items.map((item) => {
+              {this.state.sprints.map((sprint) => {
                 return (
-                  <li key={item.id}>
-                    <h3>{item.title}</h3>
-                    <p>brought by: {item.user}</p>
+                  <li key={sprint.id}>
+                    <h3>{sprint.waiter}</h3>
+                    <p>day: {sprint.day}</p>
+                    <p>hour: {sprint.hour}</p>
                   </li>
                 );
               })}

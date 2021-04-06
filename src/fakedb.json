@@ -1,20 +1,39 @@
 {
-  "orari": {
-    "-MXYuGcnzzvAtP-zP0TN": {
-      "title": "ciao",
-      "user": "ciao"
+  "lunedi": {
+    "01": {
+      "waiter": "Federico",
+      "hour": "10:00"
     },
-    "-MXYwNV9NxFk1zZErgUK": {
-      "title": "wade",
-      "user": "fede"
+    "02": {
+      "waiter": "Valentina",
+      "hour": "10:00"
     },
-    "-MXZGSEJCNDSUBV-kRXH": {
-      "title": "bbb",
-      "user": "gggg"
+    "03": {
+      "waiter": "Luca",
+      "hour": "12:00"
     },
-    "-MXZGkZcqMIUrXmJPzyp": {
-      "title": "",
-      "user": ""
+    "04": {
+      "waiter": "Claudia",
+      "hour": "12:00"
+    }
+  },
+
+  "martedi": {
+    "01": {
+      "waiter": "Federico",
+      "hour": "10:00"
+    },
+    "02": {
+      "waiter": "Valentina",
+      "hour": "10:00"
+    },
+    "03": {
+      "waiter": "Luca",
+      "hour": "12:00"
+    },
+    "04": {
+      "waiter": "Claudia",
+      "hour": "12:00"
     }
   }
 }

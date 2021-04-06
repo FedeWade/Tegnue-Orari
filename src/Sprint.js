@@ -1,5 +1,4 @@
 import React from "react";
-import Waiter from "./Waiter";
 
 class Sprint {
   constructor(waiter, day, month, hour) {
