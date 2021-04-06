@@ -1,6 +1,7 @@
 import "./App.css";
 import Employee from "./Components/Employee";
 import firebase from "firebase";
+import Sprint from "./Sprint";
 
 import React from "react";
 
@@ -81,8 +82,14 @@ class App extends React.Component {
       new Date().setDate(currentDayOfMonth + (6 - currentDayOfWeek))
     );
 
+    let sprintTest = new Sprint("fede", 8, 4, 1200);
+
     return (
       <div className="app">
+        <p>
+          {sprintTest.waiter}, {sprintTest.day}, {sprintTest.month},
+          {sprintTest.hour}
+        </p>
         <header>
           <div className="wrapper">
             <h1>Fun Food Friends</h1>
