@@ -1,5 +1,7 @@
 import "./App.css";
 import Employee from "./Components/Employee";
+import SingleDayTable from "./Components/SingleDayTable";
+
 import firebase from "firebase";
 
 import React from "react";
@@ -8,13 +10,19 @@ class App extends React.Component {
   constructor() {
     super();
     this.state = {
-      sprints: [],
+      lunediSprints: [],
+      martediSprints: [],
+      mercolediSprints: [],
+      giovediSprints: [],
+      venerdiSprints: [],
+      sabatoSprints: [],
+      domenicaSprints: [],
     };
   }
 
-  componentDidMount() {
-    const sprintsRef = firebase.database().ref("lunedi");
-    sprintsRef.on("value", (snapshot) => {
+  fetchDaySprintsFromDB(day) {
+    const lunediRef = firebase.database().ref(day);
+    lunediRef.on("value", (snapshot) => {
       let sprints = snapshot.val();
       let newState = [];
       for (let sprint in sprints) {
@@ -24,10 +32,21 @@ class App extends React.Component {
           hour: sprints[sprint].hour,
         });
       }
+      let stateName = day + "Sprints";
       this.setState({
-        sprints: newState,
+        [stateName]: newState,
       });
     });
+  }
+
+  componentDidMount() {
+    this.fetchDaySprintsFromDB("lunedi");
+    this.fetchDaySprintsFromDB("martedi");
+    this.fetchDaySprintsFromDB("mercoledi");
+    this.fetchDaySprintsFromDB("giovedi");
+    this.fetchDaySprintsFromDB("venerdi");
+    this.fetchDaySprintsFromDB("sabato");
+    this.fetchDaySprintsFromDB("domenica");
   }
 
   render() {
@@ -63,7 +82,16 @@ class App extends React.Component {
           <div className="wrapper">
             <h2>Lunedi</h2>
             <ul>
-              {this.state.sprints.map((sprint) => {
+              {this.state.lunediSprints.map((sprint) => {
+                return (
+                  <li key={sprint.id}>
+                    <h3>{sprint.waiter}</h3>
+                    <p>hour: {sprint.hour}</p>
+                  </li>
+                );
+              })}
+
+              {this.state.martediSprints.map((sprint) => {
                 return (
                   <li key={sprint.id}>
                     <h3>{sprint.waiter}</h3>
@@ -74,52 +102,14 @@ class App extends React.Component {
             </ul>
           </div>
         </section>
+
+        <SingleDayTable
+          day={lunedi.getDate()}
+          sprints={this.state.lunediSprints}
+        ></SingleDayTable>
       </div>
     );
   }
 }
-/*
-    return (
 
-      <div className="tableDiv">
-        <button onClick={createElement}> add item</button>
-
-        <table>
-          <tr>
-            <td></td>
-            <td>Lunedì {lunedi.getDate()}</td>
-            <td>Martedì {martedi.getDate()}</td>
-            <td>Mercoledì {mercoledi.getDate()}</td>
-            <td>Giovedì {giovedi.getDate()}</td>
-            <td>Venerdì {venerdi.getDate()}</td>
-            <td>Sabato {sabato.getDate()}</td>
-            <td>Domenica {domenica.getDate()}</td>
-          </tr>
-          <tr>
-            <td>9:00</td>
-            <td>
-              <Employee name="Federico"></Employee>
-            </td>
-          </tr>
-          <tr>
-            <td>10:00</td>
-          </tr>
-          <tr>
-            <td>11:00</td>
-          </tr>
-          <tr>
-            <td>12:00</td>
-          </tr>
-          <tr>
-            <td>18:00</td>
-          </tr>
-          <tr>
-            <td>19:00</td>
-          </tr>
-        </table>
-      </div>
-    );
-  }
-}
-*/
 export default App;
