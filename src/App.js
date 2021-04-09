@@ -27,9 +27,8 @@ class App extends React.Component {
       let newState = [];
       for (let sprint in sprints) {
         newState.push({
-          day: sprint,
-          waiter: sprints[sprint].waiter,
-          hour: sprints[sprint].hour,
+          hour: sprint,
+          waiters: sprints[sprint],
         });
       }
       let stateName = day + "Sprints";
@@ -80,12 +79,27 @@ class App extends React.Component {
       <div className="app">
         <section className="display-item">
           <div className="wrapper">
+            <SingleDayTable
+              day="Lunedì"
+              date={lunedi.getDate()}
+              sprints={this.state.lunediSprints}
+            ></SingleDayTable>
+
+            <SingleDayTable
+              day="Martedì"
+              date={martedi.getDate()}
+              sprints={this.state.martediSprints}
+            ></SingleDayTable>
+
             <h2>Lunedi</h2>
             <ul>
               {this.state.lunediSprints.map((sprint) => {
                 return (
-                  <li key={sprint.id}>
-                    <h3>{sprint.waiter}</h3>
+                  <li>
+                    <h3>
+                      waiters:
+                      {sprint.waiters.map((waiter) => waiter)}
+                    </h3>
                     <p>hour: {sprint.hour}</p>
                   </li>
                 );
@@ -93,8 +107,8 @@ class App extends React.Component {
 
               {this.state.martediSprints.map((sprint) => {
                 return (
-                  <li key={sprint.id}>
-                    <h3>{sprint.waiter}</h3>
+                  <li>
+                    <h3>waiters:{sprint.waiters[0]}</h3>
                     <p>hour: {sprint.hour}</p>
                   </li>
                 );
@@ -102,11 +116,6 @@ class App extends React.Component {
             </ul>
           </div>
         </section>
-
-        <SingleDayTable
-          day={lunedi.getDate()}
-          sprints={this.state.lunediSprints}
-        ></SingleDayTable>
       </div>
     );
   }

@@ -1,39 +1,8 @@
 {
   "lunedi": {
-    "01": {
-      "waiter": "Federico",
-      "hour": "10:00"
-    },
-    "02": {
-      "waiter": "Valentina",
-      "hour": "10:00"
-    },
-    "03": {
-      "waiter": "Luca",
-      "hour": "12:00"
-    },
-    "04": {
-      "waiter": "Claudia",
-      "hour": "12:00"
-    }
-  },
-
-  "martedi": {
-    "01": {
-      "waiter": "Federico",
-      "hour": "10:00"
-    },
-    "02": {
-      "waiter": "Valentina",
-      "hour": "10:00"
-    },
-    "03": {
-      "waiter": "Luca",
-      "hour": "12:00"
-    },
-    "04": {
-      "waiter": "Claudia",
-      "hour": "12:00"
-    }
+    "10:00": ["Federico", "Valentina"],
+    "12:00": ["Paolo", "Luca"],
+    "18:00": ["Federico", "Valentina"],
+    "19:00": ["Sergio", "Paolo"]
   }
 }

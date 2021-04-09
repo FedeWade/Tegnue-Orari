@@ -7,13 +7,9 @@ table {
   background-color: rgba(0, 98, 151, 0.137);
   margin: auto;
   margin-top: 20px;
-  min-width: 80%;
 }
 
 tr,
 td {
   border: 1px solid black;
-}
-
-.tableDiv {
 }
