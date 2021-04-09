@@ -1,5 +1,4 @@
 import "./App.css";
-import Employee from "./Components/Employee";
 import SingleDayTable from "./Components/SingleDayTable";
 
 import firebase from "firebase";
@@ -91,29 +90,35 @@ class App extends React.Component {
               sprints={this.state.martediSprints}
             ></SingleDayTable>
 
-            <h2>Lunedi</h2>
-            <ul>
-              {this.state.lunediSprints.map((sprint) => {
-                return (
-                  <li>
-                    <h3>
-                      waiters:
-                      {sprint.waiters.map((waiter) => waiter)}
-                    </h3>
-                    <p>hour: {sprint.hour}</p>
-                  </li>
-                );
-              })}
+            <SingleDayTable
+              day="Mercoledì"
+              date={mercoledi.getDate()}
+              sprints={this.state.mercolediSprints}
+            ></SingleDayTable>
 
-              {this.state.martediSprints.map((sprint) => {
-                return (
-                  <li>
-                    <h3>waiters:{sprint.waiters[0]}</h3>
-                    <p>hour: {sprint.hour}</p>
-                  </li>
-                );
-              })}
-            </ul>
+            <SingleDayTable
+              day="Giovedì"
+              date={giovedi.getDate()}
+              sprints={this.state.giovediSprints}
+            ></SingleDayTable>
+
+            <SingleDayTable
+              day="Venerdì"
+              date={venerdi.getDate()}
+              sprints={this.state.venerdiSprints}
+            ></SingleDayTable>
+
+            <SingleDayTable
+              day="Sabato"
+              date={sabato.getDate()}
+              sprints={this.state.sabatoSprints}
+            ></SingleDayTable>
+
+            <SingleDayTable
+              day="Domenica"
+              date={domenica.getDate()}
+              sprints={this.state.domenicaSprints}
+            ></SingleDayTable>
           </div>
         </section>
       </div>

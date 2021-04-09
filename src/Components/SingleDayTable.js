@@ -1,4 +1,5 @@
 import "./SingleDayTable.css";
+import Waiter from "./Waiter";
 import React from "react";
 
 class SingleDayTable extends React.Component {
@@ -7,9 +8,10 @@ class SingleDayTable extends React.Component {
       <div>
         <table>
           <tr>
-            <th></th>
-            <th>
-              {this.props.day} {this.props.date}
+            <th colspan="2" id="day">
+              <p>
+                {this.props.day} {this.props.date}
+              </p>
             </th>
           </tr>
 
@@ -17,7 +19,11 @@ class SingleDayTable extends React.Component {
             return (
               <tr>
                 <th>{sprint.hour}</th>
-                <td>{sprint.waiters.map((waiter) => waiter)}</td>
+                <td>
+                  {sprint.waiters.map((waiter) => (
+                    <Waiter waiterName={waiter}></Waiter>
+                  ))}
+                </td>
               </tr>
             );
           })}

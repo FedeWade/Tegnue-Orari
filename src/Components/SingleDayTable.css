@@ -1,0 +1,33 @@
+table {
+  border: 1px solid black;
+  border-radius: 15px;
+  border-collapse: collapse;
+  background-color: rgba(255, 255, 255, 0.137);
+  margin: auto;
+  margin-top: 20px;
+  min-width: 200px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+#day {
+  background-color: rgb(61, 200, 243);
+}
+
+tr,
+td,
+th {
+  border: 1px solid black;
+  text-align: center;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+table tr:last-child td:first-child {
+  border-bottom-left-radius: 10px;
+}
+
+table tr:last-child td:last-child {
+  border-bottom-right-radius: 10px;
+}
