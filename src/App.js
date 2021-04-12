@@ -76,51 +76,49 @@ class App extends React.Component {
 
     return (
       <div className="app">
-        <section className="display-item">
-          <div className="wrapper">
-            <SingleDayTable
-              day="Lunedì"
-              date={lunedi.getDate()}
-              sprints={this.state.lunediSprints}
-            ></SingleDayTable>
+        <div className="wrapper">
+          <SingleDayTable
+            day="Lunedì"
+            date={lunedi.getDate()}
+            sprints={this.state.lunediSprints}
+          ></SingleDayTable>
 
-            <SingleDayTable
-              day="Martedì"
-              date={martedi.getDate()}
-              sprints={this.state.martediSprints}
-            ></SingleDayTable>
+          <SingleDayTable
+            day="Martedì"
+            date={martedi.getDate()}
+            sprints={this.state.martediSprints}
+          ></SingleDayTable>
 
-            <SingleDayTable
-              day="Mercoledì"
-              date={mercoledi.getDate()}
-              sprints={this.state.mercolediSprints}
-            ></SingleDayTable>
+          <SingleDayTable
+            day="Mercoledì"
+            date={mercoledi.getDate()}
+            sprints={this.state.mercolediSprints}
+          ></SingleDayTable>
 
-            <SingleDayTable
-              day="Giovedì"
-              date={giovedi.getDate()}
-              sprints={this.state.giovediSprints}
-            ></SingleDayTable>
+          <SingleDayTable
+            day="Giovedì"
+            date={giovedi.getDate()}
+            sprints={this.state.giovediSprints}
+          ></SingleDayTable>
 
-            <SingleDayTable
-              day="Venerdì"
-              date={venerdi.getDate()}
-              sprints={this.state.venerdiSprints}
-            ></SingleDayTable>
+          <SingleDayTable
+            day="Venerdì"
+            date={venerdi.getDate()}
+            sprints={this.state.venerdiSprints}
+          ></SingleDayTable>
 
-            <SingleDayTable
-              day="Sabato"
-              date={sabato.getDate()}
-              sprints={this.state.sabatoSprints}
-            ></SingleDayTable>
+          <SingleDayTable
+            day="Sabato"
+            date={sabato.getDate()}
+            sprints={this.state.sabatoSprints}
+          ></SingleDayTable>
 
-            <SingleDayTable
-              day="Domenica"
-              date={domenica.getDate()}
-              sprints={this.state.domenicaSprints}
-            ></SingleDayTable>
-          </div>
-        </section>
+          <SingleDayTable
+            day="Domenica"
+            date={domenica.getDate()}
+            sprints={this.state.domenicaSprints}
+          ></SingleDayTable>
+        </div>
       </div>
     );
   }
