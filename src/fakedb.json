@@ -1,14 +1,14 @@
 {
   "lunedi": {
     "10:00": ["Federico", "Paolo"],
-    "12:00": ["Valentina", "Luca"],
+    "12:00": ["Valentina", "Luca", "Claudia"],
     "18:00": ["Federico", "Valentina", "Stefano"],
-    "19:00": ["Sergio", "Paolo"]
+    "19:00": ["Sergio", "Paolo", "Sara"]
   },
   "martedi": {
     "10:00": ["Sergio", "Luca"],
     "12:00": ["Federico", "Paolo"],
-    "18:00": ["Sergio", "Valentina"],
+    "18:00": ["Sergio", "Claudia", "Valentina"],
     "19:00": ["Valentina", "Paolo"]
   },
   "mercoledi": {
