@@ -1,12 +1,8 @@
-.App {
-  text-align: center;
-}
-
 .app {
   text-align: center;
 }
 
-.wrapper {
+.tablesWrapper {
   margin: auto;
   width: 90%;
   background-color: rgb(255, 255, 255);

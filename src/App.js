@@ -1,5 +1,6 @@
 import "./App.css";
 import SingleDayTable from "./Components/SingleDayTable";
+import DayNavBar from "./Components/DayNavBar";
 
 import firebase from "firebase";
 
@@ -16,6 +17,7 @@ class App extends React.Component {
       venerdiSprints: [],
       sabatoSprints: [],
       domenicaSprints: [],
+      currentWeek: [],
     };
   }
 
@@ -74,9 +76,18 @@ class App extends React.Component {
       new Date().setDate(currentDayOfMonth + (6 - currentDayOfWeek))
     );
 
+    this.state.currentWeek.push(lunedi);
+    this.state.currentWeek.push(martedi);
+    this.state.currentWeek.push(mercoledi);
+    this.state.currentWeek.push(giovedi);
+    this.state.currentWeek.push(venerdi);
+    this.state.currentWeek.push(sabato);
+    this.state.currentWeek.push(domenica);
+
     return (
       <div className="app">
-        <div className="wrapper">
+        <DayNavBar currentWeek={this.state.currentWeek}></DayNavBar>
+        <div className="tablesWrapper">
           <SingleDayTable
             day="Lunedì"
             date={lunedi.getDate()}
