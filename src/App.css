@@ -1,6 +1,9 @@
+html {
+  scroll-behavior: smooth;
+}
+
 .app {
   text-align: center;
-  background-color: rgb(83, 212, 206);
 }
 .tablesWrapper {
   margin-right: 80px;
