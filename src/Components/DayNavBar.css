@@ -42,7 +42,6 @@ a {
   font-family: bagnardSans;
 }
 
-a:hover,
 a:active,
 .nowActive {
   background-color: rgb(255, 255, 255);
