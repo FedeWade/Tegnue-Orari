@@ -15,7 +15,6 @@ class DayNavBar extends React.Component {
   }
 
   isNowOnScreen(elementID) {
-    //#TODO: domenica not activating
     let position = this.getElementPosition(elementID);
     if (position.top <= 250 && position.bottom > 250) return true;
     return false;
