@@ -1,6 +1,7 @@
 import "./App.css";
 import SingleDayTable from "./Components/SingleDayTable";
 import DayNavBar from "./Components/DayNavBar";
+import HeaderBar from "./Components/HeaderBar";
 
 import firebase from "firebase";
 
@@ -87,6 +88,7 @@ class App extends React.Component {
     return (
       <div className="app">
         <DayNavBar currentWeek={this.state.currentWeek}></DayNavBar>
+        <HeaderBar></HeaderBar>
         <div className="tablesWrapper">
           <SingleDayTable
             day="Lunedì"

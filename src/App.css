@@ -2,11 +2,15 @@ html {
   scroll-behavior: smooth;
 }
 
+body {
+  background-color: rgb(181, 215, 255);
+}
+
 .app {
   text-align: center;
 }
 .tablesWrapper {
   margin-right: 80px;
-  background-color: rgb(61, 152, 255);
+  background-color: rgb(181, 215, 255);
   text-align: center;
 }

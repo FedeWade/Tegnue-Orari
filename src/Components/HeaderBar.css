@@ -1,0 +1,31 @@
+.headerWrapper {
+  width: 100%;
+  height: 70px;
+  background-color: black;
+  text-align: left;
+  position: relative;
+}
+
+@font-face {
+  font-family: lemondrop;
+  src: url(../Fonts/Lemondrop.ttf);
+}
+
+.headerTitle {
+  color: white;
+  position: absolute;
+  top: 0;
+  margin: 0px;
+  margin-left: 90px;
+  height: 70px;
+  line-height: 70px;
+  font-size: 25px;
+  font-family: lemondrop;
+}
+
+img {
+  display: inline;
+  left: 0;
+  width: 70px;
+  height: 70px;
+}

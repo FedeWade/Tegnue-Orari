@@ -25,15 +25,15 @@ th {
 
 @font-face {
   font-family: digital-7;
-  src: url(digital-7.regular.ttf);
+  src: url(../Fonts/digital-7.regular.ttf);
 }
 @font-face {
   font-family: bagnardSans;
-  src: url(BagnardSans.otf);
+  src: url(../Fonts/BagnardSans.otf);
 }
 @font-face {
   font-family: ranade;
-  src: url(Ranade-Regular.otf);
+  src: url(../Fonts/Ranade-Regular.otf);
 }
 
 th {
