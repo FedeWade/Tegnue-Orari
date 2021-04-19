@@ -1,8 +1,16 @@
 import "./SingleDayTable.css";
 import Waiter from "./Waiter";
 import React from "react";
+import callLogo from "../callicon.png";
 
 class SingleDayTable extends React.Component {
+  chiamata(h) {
+    if (h === "12Chiamata" || h === "19Chiamata") {
+      return <img src={callLogo} width="47" height="47"></img>;
+    }
+    return h;
+  }
+
   render() {
     return (
       <div className="tableContainer" id={this.props.day}>
@@ -18,7 +26,7 @@ class SingleDayTable extends React.Component {
           {this.props.sprints.map((sprint) => {
             return (
               <tr>
-                <th>{sprint.hour}</th>
+                <th>{this.chiamata(sprint.hour)}</th>
                 <td>
                   {sprint.waiters.map((waiter) => (
                     <Waiter waiterName={waiter}></Waiter>

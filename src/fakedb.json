@@ -1,27 +1,35 @@
 {
   "lunedi": {
     "10:00": ["Federico", "Paolo"],
-    "12:00": ["Valentina", "Luca", "Claudia"],
+    "12:00": ["Valentina"],
+    "12Chiamata": ["Sergio", "Michela"],
     "18:00": ["Federico", "Valentina", "Stefano"],
-    "19:00": ["Sergio", "Paolo", "Sara"]
+    "19:00": ["Sergio"],
+    "19Chiamata": ["Michela", "Sara"]
   },
   "martedi": {
-    "10:00": ["Sergio", "Luca"],
+    "10:00": ["Sergio"],
     "12:00": ["Federico", "Paolo"],
-    "18:00": ["Sergio", "Claudia", "Valentina"],
-    "19:00": ["Valentina", "Paolo"]
+    "12Chiamata": ["Valentina", "Michela"],
+    "18:00": ["Sergio", "Claudia"],
+    "19:00": ["Valentina", "Paolo"],
+    "19Chiamata": ["Valentina"]
   },
   "mercoledi": {
     "10:00": ["Federico", "Valentina", "Michela"],
     "12:00": ["Paolo", "Luca"],
+    "12Chiamata": ["Valentina", "Michela"],
     "18:00": ["Federico", "Valentina"],
-    "19:00": ["Sergio", "Paolo"]
+    "19:00": ["Sergio", "Paolo"],
+    "19Chiamata": ["Sara", "Federico"]
   },
   "giovedi": {
-    "10:00": ["Federico", "Valentina"],
-    "12:00": ["Paolo", "Luca"],
-    "18:00": ["Federico", "Valentina"],
-    "19:00": ["Sergio", "Paolo"]
+    "10:00": ["Federico"],
+    "12:00": ["Paolo"],
+    "12Chiamata": ["Valentina"],
+    "18:00": ["Federico"],
+    "19:00": ["Paolo"],
+    "19Chiamata": ["Michela"]
   },
   "venerdi": {
     "10:00": ["Federico", "Valentina"],

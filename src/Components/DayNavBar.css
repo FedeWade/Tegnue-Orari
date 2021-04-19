@@ -43,7 +43,11 @@ a {
   font-family: bagnardSans;
 }
 
-a:active,
+a:active {
+  background-color: black;
+  border-color: black;
+}
+
 .nowActive {
   background-color: rgb(255, 255, 255);
   color: black;

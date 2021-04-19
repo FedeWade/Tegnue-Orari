@@ -2,7 +2,7 @@
   margin: 0px;
   margin-right: 80px;
   height: 75px;
-  background-color: black;
+  background-color: rgb(51, 51, 51);
   text-align: center;
   position: relative;
   border-radius: 0 0 40px 0;
@@ -23,7 +23,7 @@
   text-align: center;
 }
 
-img {
+.logo {
   display: inline;
   position: absolute;
   left: 0;

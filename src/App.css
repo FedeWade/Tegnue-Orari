@@ -3,7 +3,11 @@ html {
 }
 
 body {
-  background-color: rgb(181, 215, 255);
+  background-image: linear-gradient(
+    to right,
+    rgb(0, 225, 255),
+    rgb(72, 105, 255)
+  );
 }
 
 .app {
@@ -11,6 +15,5 @@ body {
 }
 .tablesWrapper {
   margin-right: 80px;
-  background-color: rgb(181, 215, 255);
   text-align: center;
 }
