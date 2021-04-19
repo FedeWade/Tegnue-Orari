@@ -39,8 +39,8 @@ a {
   right: 0px;
   box-shadow: 5px 8px 3px 0 rgba(0, 0, 0, 0.4);
   transition: 0.25s;
-  font-size: 14px;
-  font-family: mont;
+  font-size: 17px;
+  font-family: "Consolas";
 }
 
 @font-face {
@@ -65,7 +65,7 @@ a:active {
   box-shadow: 6px 12px 4px 0 rgba(0, 0, 0, 0.4);
   height: 56px;
   line-height: 56px;
-  font-size: 17px;
+  font-size: 20px;
   margin-top: -3px;
   width: 68px;
   padding-left: 6px;
