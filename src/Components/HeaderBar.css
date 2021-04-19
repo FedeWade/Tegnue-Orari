@@ -1,8 +1,8 @@
 .headerWrapper {
   margin: 0px;
-  margin-right: 90px;
+  margin-right: 80px;
   height: 75px;
-  background-image: linear-gradient(to right, rgb(0, 0, 0, 1), rgb(83, 83, 83));
+  background-color: black;
   text-align: center;
   position: relative;
   border-radius: 0 0 40px 0;
@@ -15,11 +15,9 @@
 
 .headerTitle {
   color: white;
-  position: absolute;
   top: 0;
   margin: auto;
-  margin-left: 90px;
-
+  margin-left: 70px;
   font-size: 25px;
   font-family: lemondrop;
   text-align: center;
