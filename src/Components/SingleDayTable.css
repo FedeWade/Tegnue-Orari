@@ -21,6 +21,8 @@ th {
   text-align: center;
   color: black;
   padding: 10px 0;
+  font-family: cairo;
+  font-size: 17px;
 }
 
 @font-face {
@@ -34,6 +36,14 @@ th {
 @font-face {
   font-family: ranade;
   src: url(../Fonts/Ranade-Regular.otf);
+}
+@font-face {
+  font-family: mont;
+  src: url(../Fonts/Montserrat-Regular.ttf);
+}
+@font-face {
+  font-family: mont-bold;
+  src: url(../Fonts/Montserrat-Bold.ttf);
 }
 
 th {
@@ -51,7 +61,7 @@ tr:nth-child(even) {
 #day {
   background-color: rgb(51, 51, 51);
   color: white;
-  font-family: "Verdana";
-  font-size: 18px;
+  font-family: mont-bold;
+  font-size: 22px;
   padding: 0;
 }
