@@ -1,6 +1,5 @@
 import "./HeaderBar.css";
 import React from "react";
-import mainLogo from "../logotegnue.png";
 import Logo from "../logotegnuebgg.png";
 
 class HeaderBar extends React.Component {
