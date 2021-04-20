@@ -14,6 +14,16 @@ table {
   margin-bottom: 10px;
 }
 
+@media screen and (min-width: 580px) {
+  .tableContainer {
+    display: inline-flex;
+  }
+  table {
+    margin: 10px;
+    box-shadow: -5px 4px 5px rgba(0, 0, 0, 0.5);
+  }
+}
+
 tr,
 td,
 th {

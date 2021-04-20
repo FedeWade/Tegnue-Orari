@@ -17,3 +17,9 @@ body {
   margin-right: 80px;
   text-align: center;
 }
+
+@media screen and (min-width: 580px) {
+  .tablesWrapper {
+    margin: auto;
+  }
+}
