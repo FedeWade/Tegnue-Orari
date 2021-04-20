@@ -37,10 +37,15 @@ a {
   line-height: 51px;
   padding-left: 4px;
   right: 0px;
-  box-shadow: 5px 8px 3px 0 rgba(0, 0, 0, 0.4);
+  box-shadow: 2px 4px 2px 0 rgba(0, 0, 0, 0.4);
   transition: 0.25s;
   font-size: 17px;
-  font-family: "Consolas";
+  font-family: consola;
+}
+
+@font-face {
+  font-family: consola;
+  src: url(../Fonts/CONSOLA.TTF);
 }
 
 @font-face {
