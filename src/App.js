@@ -17,9 +17,28 @@ class App extends React.Component {
       sabatoSprints: [],
       domenicaSprints: [],
       currentWeek: [],
+      currentWeekBoundaries: "",
+      nextWeekBoundaries: "",
+      stickWeekBar: "normal",
     };
     this.changeToNextWeek = this.changeToNextWeek.bind(this);
+    this.changeToCurrentWeek = this.changeToCurrentWeek.bind(this);
+    this.resetCurrentWeek = this.resetCurrentWeek.bind(this);
 
+    this.resetCurrentWeek();
+
+    this.state.currentWeekBoundaries =
+      this.state.currentWeek[0].getDate() +
+      "-" +
+      this.state.currentWeek[6].getDate();
+
+    this.state.nextWeekBoundaries =
+      this.addDays(this.state.currentWeek[0], 7).getDate() +
+      "-" +
+      this.addDays(this.state.currentWeek[6], 7).getDate();
+  }
+
+  resetCurrentWeek() {
     let currentDate = new Date();
     let currentDayOfWeek = currentDate.getDay();
     let currentDayOfMonth = currentDate.getDate();
@@ -45,6 +64,7 @@ class App extends React.Component {
     let sabato = new Date(
       new Date().setDate(currentDayOfMonth + (6 - currentDayOfWeek))
     );
+    this.state.currentWeek = [];
 
     this.state.currentWeek.push(lunedi);
     this.state.currentWeek.push(martedi);
@@ -88,6 +108,16 @@ class App extends React.Component {
 
   componentDidMount() {
     this.fetchCurrentWeekFromDB();
+    document.getElementById("currentWeek").disabled = true;
+
+    //da fixare
+    window.addEventListener("scroll", () => {
+      let elem = document.querySelector("#weekBar");
+      if (elem === null) return;
+      let rect = elem.getBoundingClientRect();
+      if (rect.top <= 0) this.setState({ stickWeekBar: "sticky" });
+      else this.setState({ stickWeekBar: "normal" });
+    });
   }
 
   addDays(date, days) {
@@ -96,7 +126,16 @@ class App extends React.Component {
     return result;
   }
 
+  decreaseDays(date, days) {
+    var result = new Date(date);
+    result.setDate(result.getDate() - days);
+    return result;
+  }
+
   changeToNextWeek() {
+    document.getElementById("nextWeek").disabled = true;
+    document.getElementById("currentWeek").disabled = false;
+
     let newWeek = [];
     newWeek.push(this.addDays(this.state.currentWeek[0], 7));
     newWeek.push(this.addDays(this.state.currentWeek[1], 7));
@@ -108,7 +147,30 @@ class App extends React.Component {
 
     this.setState({ currentWeek: newWeek });
 
-    //this.fetchCurrentWeekFromDB();
+    this.fetchDaySprintsFromDB(newWeek[0].getDate(), "lunedi");
+    this.fetchDaySprintsFromDB(newWeek[1].getDate(), "martedi");
+    this.fetchDaySprintsFromDB(newWeek[2].getDate(), "mercoledi");
+    this.fetchDaySprintsFromDB(newWeek[3].getDate(), "giovedi");
+    this.fetchDaySprintsFromDB(newWeek[4].getDate(), "venerdi");
+    this.fetchDaySprintsFromDB(newWeek[5].getDate(), "sabato");
+    this.fetchDaySprintsFromDB(newWeek[6].getDate(), "domenica");
+  }
+
+  changeToCurrentWeek() {
+    document.getElementById("currentWeek").disabled = true;
+    document.getElementById("nextWeek").disabled = false;
+
+    let newWeek = [];
+    newWeek.push(this.decreaseDays(this.state.currentWeek[0], 7));
+    newWeek.push(this.decreaseDays(this.state.currentWeek[1], 7));
+    newWeek.push(this.decreaseDays(this.state.currentWeek[2], 7));
+    newWeek.push(this.decreaseDays(this.state.currentWeek[3], 7));
+    newWeek.push(this.decreaseDays(this.state.currentWeek[4], 7));
+    newWeek.push(this.decreaseDays(this.state.currentWeek[5], 7));
+    newWeek.push(this.decreaseDays(this.state.currentWeek[6], 7));
+
+    this.setState({ currentWeek: newWeek });
+
     this.fetchDaySprintsFromDB(newWeek[0].getDate(), "lunedi");
     this.fetchDaySprintsFromDB(newWeek[1].getDate(), "martedi");
     this.fetchDaySprintsFromDB(newWeek[2].getDate(), "mercoledi");
@@ -122,8 +184,30 @@ class App extends React.Component {
     return (
       <div className="app">
         <DayNavBar currentWeek={this.state.currentWeek}></DayNavBar>
+
         <HeaderBar></HeaderBar>
-        <button onClick={this.changeToNextWeek}>Prossima settimana</button>
+
+        <div id="weekBar" className={this.state.stickWeekBar}>
+          <button
+            className="weekButton"
+            id="currentWeek"
+            onClick={this.changeToCurrentWeek}
+          >
+            Settimana
+            <br />
+            {this.state.currentWeekBoundaries}
+          </button>
+
+          <button
+            className="weekButton"
+            id="nextWeek"
+            onClick={this.changeToNextWeek}
+          >
+            Settimana
+            <br />
+            {this.state.nextWeekBoundaries}
+          </button>
+        </div>
 
         <div className="tablesWrapper">
           <SingleDayTable
