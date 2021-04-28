@@ -115,8 +115,9 @@ class App extends React.Component {
       let elem = document.querySelector("#weekBar");
       if (elem === null) return;
       let rect = elem.getBoundingClientRect();
-      if (rect.top <= 0) this.setState({ stickWeekBar: "sticky" });
-      else this.setState({ stickWeekBar: "normal" });
+      if (window.pageYOffset > 75) this.setState({ stickWeekBar: "sticky" });
+      else if (window.pageYOffset <= 75)
+        this.setState({ stickWeekBar: "normal" });
     });
   }
 
@@ -195,7 +196,9 @@ class App extends React.Component {
           >
             Settimana
             <br />
-            {this.state.currentWeekBoundaries}
+            <span className="weekNumbers">
+              {this.state.currentWeekBoundaries}
+            </span>
           </button>
 
           <button
@@ -205,7 +208,7 @@ class App extends React.Component {
           >
             Settimana
             <br />
-            {this.state.nextWeekBoundaries}
+            <span className="weekNumbers">{this.state.nextWeekBoundaries}</span>
           </button>
         </div>
 
