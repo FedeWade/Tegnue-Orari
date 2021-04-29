@@ -19,11 +19,12 @@ class App extends React.Component {
       currentWeek: [],
       currentWeekBoundaries: "",
       nextWeekBoundaries: "",
-      stickWeekBar: "normal",
+      stickWeekBar: "standard",
     };
     this.changeToNextWeek = this.changeToNextWeek.bind(this);
     this.changeToCurrentWeek = this.changeToCurrentWeek.bind(this);
     this.resetCurrentWeek = this.resetCurrentWeek.bind(this);
+    this.checkErrorScreen = this.checkErrorScreen.bind(this);
 
     this.resetCurrentWeek();
 
@@ -116,7 +117,7 @@ class App extends React.Component {
       if (elem === null) return;
       if (window.pageYOffset > 75) this.setState({ stickWeekBar: "sticky" });
       else if (window.pageYOffset <= 75)
-        this.setState({ stickWeekBar: "normal" });
+        this.setState({ stickWeekBar: "standard" });
     });
   }
 
@@ -178,6 +179,26 @@ class App extends React.Component {
     this.fetchDaySprintsFromDB(newWeek[4].getDate(), "venerdi");
     this.fetchDaySprintsFromDB(newWeek[5].getDate(), "sabato");
     this.fetchDaySprintsFromDB(newWeek[6].getDate(), "domenica");
+  }
+
+  checkErrorScreen() {
+    if (
+      !this.state.lunediSprints.length &&
+      !this.state.martediSprints.length &&
+      !this.state.mercolediSprints.length &&
+      !this.state.giovediSprints.length &&
+      !this.state.venerdiSprints.length &&
+      !this.state.sabatoSprints.length &&
+      !this.state.domenicaSprints.length
+    ) {
+      return (
+        <div className="errorWrapper">
+          <p className="errorMessage">
+            Gli orari per questa settimana non sono ancora disponibili.
+          </p>
+        </div>
+      );
+    }
   }
 
   render() {
@@ -253,6 +274,8 @@ class App extends React.Component {
             date={this.state.currentWeek[6].getDate()}
             sprints={this.state.domenicaSprints}
           ></SingleDayTable>
+
+          {this.checkErrorScreen()}
         </div>
       </div>
     );

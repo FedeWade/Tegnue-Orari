@@ -12,6 +12,8 @@ class SingleDayTable extends React.Component {
   }
 
   render() {
+    if (this.props.sprints.length === 0) return null;
+
     return (
       <div className="tableContainer" id={this.props.day}>
         <table>
