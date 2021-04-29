@@ -64,7 +64,7 @@ class App extends React.Component {
     let sabato = new Date(
       new Date().setDate(currentDayOfMonth + (6 - currentDayOfWeek))
     );
-    this.state.currentWeek = [];
+    this.setState({ currentWeek: [] });
 
     this.state.currentWeek.push(lunedi);
     this.state.currentWeek.push(martedi);
@@ -114,7 +114,6 @@ class App extends React.Component {
     window.addEventListener("scroll", () => {
       let elem = document.querySelector("#weekBar");
       if (elem === null) return;
-      let rect = elem.getBoundingClientRect();
       if (window.pageYOffset > 75) this.setState({ stickWeekBar: "sticky" });
       else if (window.pageYOffset <= 75)
         this.setState({ stickWeekBar: "normal" });
