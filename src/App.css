@@ -77,10 +77,15 @@ body {
   margin: auto;
   margin-top: 80px;
   box-shadow: 3px 3px 8px 0 rgba(0, 0, 0, 0.609);
+  max-width: 300px;
 }
 
 .errorMessage {
   font-family: ranade;
   font-size: 16px;
   color: black;
+  margin: 0;
+}
+#sadface {
+  margin-top: 5px;
 }

@@ -194,7 +194,13 @@ class App extends React.Component {
     ) {
       return (
         <div className="errorWrapper">
-          <img src={sorryF} width="70" height="70" alt="sad face"></img>
+          <img
+            src={sorryF}
+            width="70"
+            height="70"
+            alt="sad face"
+            id="sadface"
+          ></img>
           <p className="errorMessage">
             Gli orari per questa settimana non sono ancora disponibili.
           </p>
