@@ -2,6 +2,9 @@ import "./App.css";
 import SingleDayTable from "./Components/SingleDayTable";
 import DayNavBar from "./Components/DayNavBar";
 import HeaderBar from "./Components/HeaderBar";
+import sorry from "./sorry.svg";
+import sorryF from "./sorry.jpg";
+
 import firebase from "firebase";
 import React from "react";
 
@@ -9,13 +12,13 @@ class App extends React.Component {
   constructor() {
     super();
     this.state = {
-      lunediSprints: [],
-      martediSprints: [],
-      mercolediSprints: [],
-      giovediSprints: [],
-      venerdiSprints: [],
-      sabatoSprints: [],
-      domenicaSprints: [],
+      lunediSprints: [{ hour: "", waiters: [] }],
+      martediSprints: [{ hour: "", waiters: [] }],
+      mercolediSprints: [{ hour: "", waiters: [] }],
+      giovediSprints: [{ hour: "", waiters: [] }],
+      venerdiSprints: [{ hour: "", waiters: [] }],
+      sabatoSprints: [{ hour: "", waiters: [] }],
+      domenicaSprints: [{ hour: "", waiters: [] }],
       currentWeek: [],
       currentWeekBoundaries: "",
       nextWeekBoundaries: "",
@@ -111,7 +114,6 @@ class App extends React.Component {
     this.fetchCurrentWeekFromDB();
     document.getElementById("currentWeek").disabled = true;
 
-    //da fixare
     window.addEventListener("scroll", () => {
       let elem = document.querySelector("#weekBar");
       if (elem === null) return;
@@ -193,6 +195,7 @@ class App extends React.Component {
     ) {
       return (
         <div className="errorWrapper">
+          <img src={sorryF} width="70" height="70"></img>
           <p className="errorMessage">
             Gli orari per questa settimana non sono ancora disponibili.
           </p>
