@@ -76,8 +76,6 @@ body {
   max-width: 80%;
   margin: auto;
   margin-top: 80px;
-  display: inline-flex;
-  vertical-align: middle;
   box-shadow: 3px 3px 8px 0 rgba(0, 0, 0, 0.609);
 }
 
