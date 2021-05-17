@@ -96,3 +96,8 @@ body {
 #sadface {
   margin-top: 5px;
 }
+
+.copy {
+  font-size: 12px;
+  margin-bottom: 7px;
+}
