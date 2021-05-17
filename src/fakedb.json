@@ -1,72 +1,72 @@
 {
-  "lunedi19": {
-    "10:00": ["Federico", "Paolo"],
+  "lunedi17": {
+    "10:00": ["Federico", "Elia"],
     "12:00": ["Valentina"],
-    "12Chiamata": ["Sergio", "Michela"],
-    "18:00": ["Federico", "Valentina", "Stefano"],
-    "19:00": ["Sergio"],
-    "19Chiamata": ["Michela", "Sara"]
+    "12Chiamata": ["Laura", "Michele"],
+    "18:00": ["Federico", "Valentina", "Lorenzo"],
+    "19:00": ["Luca"],
+    "19Chiamata": ["Michele", "Gaia"]
   },
-  "martedi20": {
-    "10:00": ["Sergio"],
-    "12:00": ["Federico", "Paolo"],
-    "12Chiamata": ["Valentina", "Michela"],
-    "18:00": ["Sergio", "Claudia"],
-    "19:00": ["Valentina", "Paolo"],
-    "19Chiamata": ["Valentina"]
+  "martedi18": {
+    "10:00": ["Lorenzo"],
+    "12:00": ["Federico", "Luca"],
+    "12Chiamata": ["Valentina", "Michele"],
+    "18:00": ["Elia", "Alice"],
+    "19:00": ["Valentina", "Luca"],
+    "19Chiamata": ["Michele"]
   },
-  "mercoledi21": {
-    "10:00": ["Federico", "Valentina", "Michela"],
-    "12:00": ["Paolo", "Luca"],
-    "12Chiamata": ["Valentina", "Michela"],
+  "mercoledi19": {
+    "10:00": ["Federico", "Valentina", "Michele"],
+    "12:00": ["Alice", "Luca"],
+    "12Chiamata": ["Valentina", "Gaia"],
     "18:00": ["Federico", "Valentina"],
-    "19:00": ["Sergio", "Paolo"],
-    "19Chiamata": ["Sara", "Federico"]
+    "19:00": ["Luca", "Alice"],
+    "19Chiamata": ["Michele", "Federico"]
   },
-  "giovedi22": {
+  "giovedi20": {
     "10:00": ["Federico"],
-    "12:00": ["Paolo"],
+    "12:00": ["Alice"],
     "12Chiamata": ["Valentina"],
     "18:00": ["Federico"],
-    "19:00": ["Paolo"],
-    "19Chiamata": ["Michela"]
+    "19:00": ["Laura"],
+    "19Chiamata": ["Michele"]
   },
-  "venerdi23": {
+  "venerdi21": {
     "10:00": ["Federico", "Valentina"],
-    "12:00": ["Paolo", "Luca"],
+    "12:00": ["Laura", "Luca"],
     "18:00": ["Federico", "Valentina"],
-    "19:00": ["Sergio", "Paolo"]
+    "19:00": ["Gaia", "Alice"]
   },
-  "sabato24": {
+  "sabato22": {
     "10:00": ["Federico", "Valentina"],
-    "12:00": ["Paolo", "Luca"],
+    "12:00": ["Michele", "Luca"],
     "18:00": ["Federico", "Valentina"],
-    "19:00": ["Sergio", "Paolo"]
+    "19:00": ["Alice", "Elia"]
   },
-  "domenica25": {
+  "domenica23": {
     "10:00": ["Federico", "Valentina"],
-    "12:00": ["Paolo", "Luca"],
+    "12:00": ["Elia", "Luca"],
     "18:00": ["Federico", "Valentina"],
-    "19:00": ["Sergio", "Paolo"]
+    "19:00": ["Lorenzo", "Elia"]
   },
 
-  "lunedi26": {
-    "10:00": ["Federico", "Paolo"],
+  "lunedi24": {
+    "10:00": ["Federico", "Lorenzo"],
     "12:00": ["Valentina"],
-    "12Chiamata": ["Sergio", "Michela"],
-    "18:00": ["Federico", "Valentina", "Stefano"],
-    "19:00": ["Sergio"],
-    "19Chiamata": ["Michela", "Sara"]
+    "12Chiamata": ["Laura", "Michele"],
+    "18:00": ["Federico", "Valentina", "Alice"],
+    "19:00": ["Luca"],
+    "19Chiamata": ["Michele", "Elia"]
   },
-  "martedi27": {
-    "10:00": ["Sergio"],
-    "12:00": ["Federico", "Paolo"],
-    "12Chiamata": ["Valentina", "Michela"],
-    "18:00": ["Sergio", "Claudia"],
-    "19:00": ["Valentina", "Paolo"],
+  "martedi25": {
+    "10:00": ["Luca"],
+    "12:00": ["Federico", "Alice"],
+    "12Chiamata": ["Valentina", "Michele"],
+    "18:00": ["Gaia", "Lorenzo"],
+    "19:00": ["Valentina", "Michele"],
     "19Chiamata": ["Valentina"]
   },
-  "mercoledi28": {
+  "mercoledi26": {
     "10:00": ["Federico", "Valentina", "Michela"],
     "12:00": ["Paolo", "Luca"],
     "12Chiamata": ["Valentina", "Michela"],
@@ -74,7 +74,7 @@
     "19:00": ["Sergio", "Paolo"],
     "19Chiamata": ["Sara", "Federico"]
   },
-  "giovedi29": {
+  "giovedi27": {
     "10:00": ["Federico"],
     "12:00": ["Paolo"],
     "12Chiamata": ["Valentina"],
@@ -82,73 +82,22 @@
     "19:00": ["Paolo"],
     "19Chiamata": ["Michela"]
   },
-  "venerdi30": {
+  "venerdi28": {
     "10:00": ["Federico", "Valentina"],
     "12:00": ["Paolo", "Luca"],
     "18:00": ["Federico", "Valentina"],
     "19:00": ["Sergio", "Paolo"]
   },
-  "sabato1": {
+  "sabato29": {
     "10:00": ["Federico", "Valentina"],
     "12:00": ["Paolo", "Luca"],
     "18:00": ["Federico", "Valentina"],
     "19:00": ["Sergio", "Paolo"]
   },
-  "domenica2": {
+  "domenica30": {
     "10:00": ["Valentina"],
     "12:00": ["Paolo"],
     "18:00": ["Federico"],
     "19:00": ["Sergio"]
-  },
-
-  "lunedi3": {
-    "10:00": ["Federico", "Kemzo"],
-    "12:00": ["Valentina"],
-    "12Chiamata": ["Claudia", "Michele"],
-    "18:00": ["Federico", "Valentina", "Kemzo"],
-    "19:00": ["Claudia"],
-    "19Chiamata": ["Michele", "Anna"]
-  },
-  "martedi4": {
-    "10:00": ["Laura"],
-    "12:00": ["Federico", "Anna"],
-    "12Chiamata": ["Valentina", "Michele"],
-    "18:00": ["Claudia"],
-    "19:00": ["Valentina", "Anna"],
-    "19Chiamata": ["Kemzo"]
-  },
-  "mercoledi5": {
-    "10:00": ["Federico", "Valentina", "Michele"],
-    "12:00": ["Laura", "Luca"],
-    "12Chiamata": ["Valentina", "Michele"],
-    "18:00": ["Federico", "Valentina"],
-    "19:00": ["Michele", "Anna"],
-    "19Chiamata": ["Laura", "Federico"]
-  },
-  "giovedi6": {
-    "10:00": ["Federico"],
-    "12:00": ["Michele"],
-    "12Chiamata": ["Valentina"],
-    "18:00": ["Federico"],
-    "19:00": ["Anna"],
-    "19Chiamata": ["Kemzo"]
-  },
-  "venerdi7": {
-    "10:00": ["Federico", "Valentina"],
-    "12:00": ["Anna", "Luca"],
-    "18:00": ["Federico", "Valentina"],
-    "19:00": ["Claudia", "Michele"]
-  },
-  "sabato8": {
-    "10:00": ["Federico", "Valentina"],
-    "12:00": ["Michele", "Luca"],
-    "18:00": ["Federico", "Kemzo"],
-    "19:00": ["Laura", "Luca"]
-  },
-  "domenica9": {
-    "10:00": ["Federico", "Valentina"],
-    "12:00": ["Michele", "Luca"],
-    "18:00": ["Kemzo", "Valentina"],
-    "19:00": ["Anna", "Claudia"]
   }
 }
