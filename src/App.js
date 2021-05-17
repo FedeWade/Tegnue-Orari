@@ -21,6 +21,7 @@ class App extends React.Component {
       currentWeek: [],
       currentWeekBoundaries: "",
       nextWeekBoundaries: "",
+      showingNextWeek: false,
       stickWeekBar: "standard",
     };
     this.changeToNextWeek = this.changeToNextWeek.bind(this);
@@ -135,6 +136,8 @@ class App extends React.Component {
   }
 
   changeToNextWeek() {
+    if (this.state.showingNextWeek === true) return;
+    this.setState({ showingNextWeek: true });
     document.getElementById("nextWeek").disabled = true;
     document.getElementById("currentWeek").disabled = false;
 
@@ -159,6 +162,8 @@ class App extends React.Component {
   }
 
   changeToCurrentWeek() {
+    if (this.state.showingNextWeek === false) return;
+    this.setState({ showingNextWeek: false });
     document.getElementById("currentWeek").disabled = true;
     document.getElementById("nextWeek").disabled = false;
 
