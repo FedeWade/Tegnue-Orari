@@ -16,13 +16,13 @@ class Waiter extends React.Component {
 
   getBgColor(name) {
     if (name === "Michele") return "#FF7F50";
-    else if (name === "Elia") return "#3333ff";
+    else if (name === "Elia") return "#4242f0";
     else if (name === "Kemzo") return "#672e3b";
-    else if (name === "Luca") return "#d32417";
+    else if (name === "Luca") return "#c72e23";
     else if (name === "Valentina") return "#9932CC";
     else if (name === "Federico") return "#79c753";
     else if (name === "Laura") return "#75b7f0";
-    else if (name === "Alice") return "#FF69B4";
+    else if (name === "Alice") return "#f07ab5";
     else if (name === "Lorenzo") return "#20B2AA";
     else if (name === "Gaia") return "#f2c40d";
   }

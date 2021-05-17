@@ -1,53 +1,53 @@
 {
   "lunedi17": {
-    "10:00": ["Federico", "Elia"],
-    "12:00": ["Valentina"],
-    "12Chiamata": ["Laura", "Michele"],
-    "18:00": ["Federico", "Valentina", "Lorenzo"],
-    "19:00": ["Luca"],
-    "19Chiamata": ["Michele", "Gaia"]
+    "10:00": [],
+    "12:00": [],
+    "12Chiamata": [],
+    "18:00": [],
+    "19:00": [],
+    "19Chiamata": []
   },
   "martedi18": {
-    "10:00": ["Lorenzo"],
-    "12:00": ["Federico", "Luca"],
-    "12Chiamata": ["Valentina", "Michele"],
-    "18:00": ["Elia", "Alice"],
-    "19:00": ["Valentina", "Luca"],
-    "19Chiamata": ["Michele"]
+    "10:00": [],
+    "12:00": [],
+    "12Chiamata": [],
+    "18:00": [],
+    "19:00": [],
+    "19Chiamata": []
   },
   "mercoledi19": {
-    "10:00": ["Federico", "Valentina", "Michele"],
-    "12:00": ["Alice", "Luca"],
-    "12Chiamata": ["Valentina", "Gaia"],
-    "18:00": ["Federico", "Valentina"],
-    "19:00": ["Luca", "Alice"],
-    "19Chiamata": ["Michele", "Federico"]
+    "10:00": [],
+    "12:00": [],
+    "12Chiamata": [],
+    "18:00": [],
+    "19:00": [],
+    "19Chiamata": []
   },
   "giovedi20": {
-    "10:00": ["Federico"],
-    "12:00": ["Alice"],
-    "12Chiamata": ["Valentina"],
-    "18:00": ["Federico"],
-    "19:00": ["Laura"],
-    "19Chiamata": ["Michele"]
+    "10:00": [],
+    "12:00": [],
+    "12Chiamata": [],
+    "18:00": [],
+    "19:00": [],
+    "19Chiamata": []
   },
   "venerdi21": {
-    "10:00": ["Federico", "Valentina"],
-    "12:00": ["Laura", "Luca"],
-    "18:00": ["Federico", "Valentina"],
-    "19:00": ["Gaia", "Alice"]
+    "10:00": [],
+    "12:00": [],
+    "12Chiamata": [],
+    "18:00": [],
+    "19:00": [],
+    "19Chiamata": []
   },
   "sabato22": {
-    "10:00": ["Federico", "Valentina"],
-    "12:00": ["Michele", "Luca"],
-    "18:00": ["Federico", "Valentina"],
-    "19:00": ["Alice", "Elia"]
+    "10:00": ["Federico", "Valentina", "Michele", "Kemzo"],
+    "10:30": ["Alice", "Elia", "Lorenzo", "Luca"],
+    "12:00": ["Laura", "Gaia"]
   },
   "domenica23": {
-    "10:00": ["Federico", "Valentina"],
-    "12:00": ["Elia", "Luca"],
-    "18:00": ["Federico", "Valentina"],
-    "19:00": ["Lorenzo", "Elia"]
+    "10:00": ["Federico", "Valentina", "Michele", "Kemzo"],
+    "10:30": ["Alice", "Elia", "Lorenzo", "Luca"],
+    "12:00": ["Laura", "Gaia"]
   },
 
   "lunedi24": {
