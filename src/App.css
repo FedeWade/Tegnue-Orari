@@ -11,12 +11,14 @@ body {
 }
 
 .app {
+  position: relative;
   text-align: center;
+  min-height: 100vh;
 }
 .tablesWrapper {
   margin-top: 40px;
-
   margin-right: 80px;
+  padding-bottom: 50px;
   text-align: center;
 }
 
@@ -93,8 +95,15 @@ body {
   margin: 0;
   font-weight: bold;
 }
+
 #sadface {
   margin-top: 5px;
+}
+
+.copyContainer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
 }
 
 .copy {

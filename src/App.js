@@ -291,7 +291,9 @@ class App extends React.Component {
           {this.checkErrorScreen()}
         </div>
 
-        <p className="copy"> Copyright &copy; Federico Ballarin</p>
+        <div className="copyContainer">
+          <p className="copy"> Copyright &copy; Federico Ballarin</p>
+        </div>
       </div>
     );
   }
