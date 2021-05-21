@@ -7,11 +7,8 @@ class HeaderBar extends React.Component {
     return (
       <div className="headerWrapper">
         <img className="logo" src={Logo} alt="logo" />
-        <p className="headerTitle">
-          Le Tegnùe
-          <br />
-          Orari
-        </p>
+        <p className="headerTitle1">Le Tegnùe</p>
+        <p className="headerTitle2">Orari</p>
       </div>
     );
   }

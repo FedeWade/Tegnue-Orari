@@ -98,7 +98,7 @@ class DayNavBar extends React.Component {
               className={this.state.giovediVisibility}
               id="nav4"
               onClick={() => {
-                var elmnt = document.getElementById("Gioved'");
+                var elmnt = document.getElementById("Giovedì");
                 if (!elmnt) return;
                 elmnt.scrollIntoView();
               }}

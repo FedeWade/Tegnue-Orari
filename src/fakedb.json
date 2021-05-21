@@ -51,44 +51,44 @@
   },
 
   "lunedi24": {
-    "10:00": [],
-    "12:00": [],
-    "12Chiamata": [],
-    "18:00": [],
-    "19:00": [],
-    "19Chiamata": []
+    "10:30": ["Valentina"],
+    "11:30": ["Michele"],
+    "12Chiamata": ["Federico"],
+    "18:00": ["Kemzo"],
+    "19:00": ["Michele"],
+    "19Chiamata": ["Luca"]
   },
   "martedi25": {
-    "10:00": [],
-    "12:00": [],
-    "12Chiamata": [],
-    "18:00": [],
-    "19:00": [],
-    "19Chiamata": []
+    "10:30": ["Valentina"],
+    "11:30": ["Michele"],
+    "12Chiamata": ["Luca"],
+    "18:00": ["Federico"],
+    "19:00": ["Luca"],
+    "19Chiamata": ["Lorenzo"]
   },
   "mercoledi26": {
-    "10:00": [],
-    "12:00": [],
-    "12Chiamata": [],
-    "18:00": [],
-    "19:00": [],
-    "19Chiamata": []
+    "10:30": ["Kemzo"],
+    "11:30": ["Federico"],
+    "12Chiamata": ["Valentina"],
+    "18:00": ["Valentina"],
+    "19:00": ["Luca"],
+    "19Chiamata": ["Kemzo"]
   },
   "giovedi27": {
-    "10:00": [],
-    "12:00": [],
-    "12Chiamata": [],
-    "18:00": [],
-    "19:00": [],
-    "19Chiamata": []
+    "10:30": ["Federico"],
+    "11:30": ["Valentina"],
+    "12Chiamata": ["Kemzo"],
+    "18:00": ["Kemzo"],
+    "19:00": ["Michele"],
+    "19Chiamata": ["Lorenzo"]
   },
   "venerdi28": {
-    "10:00": [],
-    "12:00": [],
-    "12Chiamata": [],
-    "18:00": [],
-    "19:00": [],
-    "19Chiamata": []
+    "10:30": ["Luca"],
+    "11:30": ["Michele"],
+    "12Chiamata": ["Federico"],
+    "18:00": ["Kemzo"],
+    "19:00": ["Michele"],
+    "19Chiamata": ["Federico"]
   },
   "sabato29": {
     "10:00": [],
