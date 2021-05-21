@@ -55,9 +55,9 @@ class DayNavBar extends React.Component {
       <div className="navBarWrapper">
         <ul className="navBar">
           <li>
-            <a
+            <button
               className={this.state.lunediVisibility}
-              href="javascript:void(0)"
+              id="nav1"
               onClick={() => {
                 var elmnt = document.getElementById("Lunedì");
                 if (!elmnt) return;
@@ -65,12 +65,12 @@ class DayNavBar extends React.Component {
               }}
             >
               Lun {this.props.currentWeek[0].getDate()}
-            </a>
+            </button>
           </li>
           <li>
-            <a
+            <button
               className={this.state.martediVisibility}
-              href="javascript:void(0)"
+              id="nav2"
               onClick={() => {
                 var elmnt = document.getElementById("Martedì");
                 if (!elmnt) return;
@@ -78,12 +78,12 @@ class DayNavBar extends React.Component {
               }}
             >
               Mar {this.props.currentWeek[1].getDate()}
-            </a>
+            </button>
           </li>
           <li>
-            <a
+            <button
               className={this.state.mercolediVisibility}
-              href="javascript:void(0)"
+              id="nav3"
               onClick={() => {
                 var elmnt = document.getElementById("Mercoledì");
                 if (!elmnt) return;
@@ -91,12 +91,12 @@ class DayNavBar extends React.Component {
               }}
             >
               Mer {this.props.currentWeek[2].getDate()}
-            </a>
+            </button>
           </li>
           <li>
-            <a
+            <button
               className={this.state.giovediVisibility}
-              href="javascript:void(0)"
+              id="nav4"
               onClick={() => {
                 var elmnt = document.getElementById("Gioved'");
                 if (!elmnt) return;
@@ -104,12 +104,12 @@ class DayNavBar extends React.Component {
               }}
             >
               Gio {this.props.currentWeek[3].getDate()}
-            </a>
+            </button>
           </li>
           <li>
-            <a
+            <button
               className={this.state.venerdiVisibility}
-              href="javascript:void(0)"
+              id="nav5"
               onClick={() => {
                 var elmnt = document.getElementById("Venerdì");
                 if (!elmnt) return;
@@ -117,12 +117,12 @@ class DayNavBar extends React.Component {
               }}
             >
               Ven {this.props.currentWeek[4].getDate()}
-            </a>
+            </button>
           </li>
           <li>
-            <a
+            <button
               className={this.state.sabatoVisibility}
-              href="javascript:void(0)"
+              id="nav6"
               onClick={() => {
                 var elmnt = document.getElementById("Sabato");
                 if (!elmnt) return;
@@ -130,12 +130,12 @@ class DayNavBar extends React.Component {
               }}
             >
               Sab {this.props.currentWeek[5].getDate()}
-            </a>
+            </button>
           </li>
           <li>
-            <a
+            <button
               className={this.state.domenicaVisibility}
-              href="javascript:void(0)"
+              id="nav7"
               onClick={() => {
                 var elmnt = document.getElementById("Domenica");
                 if (!elmnt) return;
@@ -143,7 +143,7 @@ class DayNavBar extends React.Component {
               }}
             >
               Dom {this.props.currentWeek[6].getDate()}
-            </a>
+            </button>
           </li>
         </ul>
       </div>
