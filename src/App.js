@@ -3,6 +3,7 @@ import SingleDayTable from "./Components/SingleDayTable";
 import DayNavBar from "./Components/DayNavBar";
 import HeaderBar from "./Components/HeaderBar";
 import sorryF from "./sorry.jpg";
+import AddToHomeScreen from "@ideasio/add-to-homescreen-react";
 
 import firebase from "firebase";
 import React from "react";
@@ -217,9 +218,9 @@ class App extends React.Component {
   render() {
     return (
       <div className="app">
-        <DayNavBar currentWeek={this.state.currentWeek}></DayNavBar>
+        <AddToHomeScreen />
 
-        <HeaderBar></HeaderBar>
+        <DayNavBar currentWeek={this.state.currentWeek}></DayNavBar>
 
         <div id="weekBar" className={this.state.stickWeekBar}>
           <button
@@ -244,6 +245,8 @@ class App extends React.Component {
             <span className="weekNumbers">{this.state.nextWeekBoundaries}</span>
           </button>
         </div>
+
+        <HeaderBar></HeaderBar>
 
         <div className="tablesWrapper">
           <SingleDayTable
