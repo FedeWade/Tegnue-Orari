@@ -72,7 +72,13 @@ li {
 }
 
 button:active,
-a:active {
+#nav1:active,
+#nav2:active,
+#nav3:active,
+#nav4:active,
+#nav5:active,
+#nav6:active,
+#nav7:active {
   background-color: black;
   border-color: black;
 }
