@@ -55,37 +55,93 @@ class DayNavBar extends React.Component {
       <div className="navBarWrapper">
         <ul className="navBar">
           <li>
-            <a className={this.state.lunediVisibility} href="#Lunedì">
+            <a
+              className={this.state.lunediVisibility}
+              href="javascript:void(0)"
+              onClick={() => {
+                var elmnt = document.getElementById("Lunedì");
+                if (!elmnt) return;
+                elmnt.scrollIntoView();
+              }}
+            >
               Lun {this.props.currentWeek[0].getDate()}
             </a>
           </li>
           <li>
-            <a className={this.state.martediVisibility} href="#Martedì">
+            <a
+              className={this.state.martediVisibility}
+              href="javascript:void(0)"
+              onClick={() => {
+                var elmnt = document.getElementById("Martedì");
+                if (!elmnt) return;
+                elmnt.scrollIntoView();
+              }}
+            >
               Mar {this.props.currentWeek[1].getDate()}
             </a>
           </li>
           <li>
-            <a className={this.state.mercolediVisibility} href="#Mercoledì">
+            <a
+              className={this.state.mercolediVisibility}
+              href="javascript:void(0)"
+              onClick={() => {
+                var elmnt = document.getElementById("Mercoledì");
+                if (!elmnt) return;
+                elmnt.scrollIntoView();
+              }}
+            >
               Mer {this.props.currentWeek[2].getDate()}
             </a>
           </li>
           <li>
-            <a className={this.state.giovediVisibility} href="#Giovedì">
+            <a
+              className={this.state.giovediVisibility}
+              href="javascript:void(0)"
+              onClick={() => {
+                var elmnt = document.getElementById("Gioved'");
+                if (!elmnt) return;
+                elmnt.scrollIntoView();
+              }}
+            >
               Gio {this.props.currentWeek[3].getDate()}
             </a>
           </li>
           <li>
-            <a className={this.state.venerdiVisibility} href="#Venerdì">
+            <a
+              className={this.state.venerdiVisibility}
+              href="javascript:void(0)"
+              onClick={() => {
+                var elmnt = document.getElementById("Venerdì");
+                if (!elmnt) return;
+                elmnt.scrollIntoView();
+              }}
+            >
               Ven {this.props.currentWeek[4].getDate()}
             </a>
           </li>
           <li>
-            <a className={this.state.sabatoVisibility} href="#Sabato">
+            <a
+              className={this.state.sabatoVisibility}
+              href="javascript:void(0)"
+              onClick={() => {
+                var elmnt = document.getElementById("Sabato");
+                if (!elmnt) return;
+                elmnt.scrollIntoView();
+              }}
+            >
               Sab {this.props.currentWeek[5].getDate()}
             </a>
           </li>
           <li>
-            <a className={this.state.domenicaVisibility} href="#Domenica">
+            <a
+              className={this.state.domenicaVisibility}
+              href="javascript:void(0)"
+              onClick={() => {
+                var elmnt = document.getElementById("Domenica");
+                if (!elmnt) return;
+                elmnt.scrollIntoView();
+              }}
+            >
               Dom {this.props.currentWeek[6].getDate()}
             </a>
           </li>
