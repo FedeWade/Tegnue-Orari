@@ -29,6 +29,10 @@ li {
   height: 14%;
 }
 
+button {
+  z-index: 99;
+}
+
 #nav1,
 #nav2,
 #nav3,
