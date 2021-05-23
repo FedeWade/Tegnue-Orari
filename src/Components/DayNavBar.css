@@ -87,6 +87,17 @@ button:active,
   border-color: black;
 }
 
+#nav1:disabled,
+#nav2:disabled,
+#nav3:disabled,
+#nav4:disabled,
+#nav5:disabled,
+#nav6:disabled,
+#nav7:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
 #nav1.nowActive,
 #nav2.nowActive,
 #nav3.nowActive,

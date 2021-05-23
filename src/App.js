@@ -28,6 +28,7 @@ class App extends React.Component {
     this.changeToCurrentWeek = this.changeToCurrentWeek.bind(this);
     this.resetCurrentWeek = this.resetCurrentWeek.bind(this);
     this.checkErrorScreen = this.checkErrorScreen.bind(this);
+    this.disableEmptyDayNavBar = this.disableEmptyDayNavBar.bind(this);
 
     this.resetCurrentWeek();
 
@@ -214,6 +215,50 @@ class App extends React.Component {
     }
   }
 
+  disableEmptyDayNavBar() {
+    let nav1 = document.getElementById("nav1");
+    if (nav1) {
+      if (!this.state.lunediSprints.length) nav1.disabled = true;
+      else nav1.disabled = false;
+    }
+
+    let nav2 = document.getElementById("nav2");
+    if (nav2) {
+      if (!this.state.martediSprints.length) nav2.disabled = true;
+      else nav2.disabled = false;
+    }
+
+    let nav3 = document.getElementById("nav3");
+    if (nav3) {
+      if (!this.state.mercolediSprints.length) nav3.disabled = true;
+      else nav3.disabled = false;
+    }
+
+    let nav4 = document.getElementById("nav4");
+    if (nav4) {
+      if (!this.state.giovediSprints.length) nav4.disabled = true;
+      else nav4.disabled = false;
+    }
+
+    let nav5 = document.getElementById("nav5");
+    if (nav5) {
+      if (!this.state.venerdiSprints.length) nav5.disabled = true;
+      else nav5.disabled = false;
+    }
+
+    let nav6 = document.getElementById("nav6");
+    if (nav6) {
+      if (!this.state.sabatoSprints.length) nav6.disabled = true;
+      else nav6.disabled = false;
+    }
+
+    let nav7 = document.getElementById("nav7");
+    if (nav7) {
+      if (!this.state.domenicaSprints.length) nav7.disabled = true;
+      else nav7.disabled = false;
+    }
+  }
+
   render() {
     return (
       <div className="app">
@@ -294,6 +339,7 @@ class App extends React.Component {
         <div className="copyContainer">
           <p className="copy"> Copyright &copy; Federico Ballarin</p>
         </div>
+        {this.disableEmptyDayNavBar()}
       </div>
     );
   }
