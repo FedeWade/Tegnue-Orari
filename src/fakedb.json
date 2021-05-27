@@ -88,22 +88,17 @@
     "12Chiamata": ["Federico"],
     "18:00": ["Kemzo"],
     "19:00": ["Lorenzo"],
-    "19Chiamata": ["Michele"]
+    "19Chiamata": ["Valentina", "Federico"]
   },
   "sabato29": {
-    "10:00": [],
-    "12:00": [],
-    "12Chiamata": [],
-    "18:00": [],
-    "19:00": [],
-    "19Chiamata": []
+    "10:00": ["Luca", "Kemzo", "Michele", "Lorenzo"],
+    "11:00": ["Elia", "Valentina", "Federico"],
+    "18:00": ["Giulia"]
   },
   "domenica30": {
-    "10:00": [],
-    "12:00": [],
-    "12Chiamata": [],
-    "18:00": [],
-    "19:00": [],
-    "19Chiamata": []
+    "10:00": ["Laura", "Kemzo", "Michele", "Federico", "Alan"],
+    "10:30": ["Diego"],
+    "11:00": ["Elia", "Valentina", "Lorenzo", "Luca"],
+    "18:30": ["Giulia"]
   }
 }
