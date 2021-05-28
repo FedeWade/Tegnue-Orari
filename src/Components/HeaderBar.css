@@ -41,6 +41,17 @@
   }
 }
 
+@media screen and (max-width: 361px) {
+  .headerTitle1,
+  .headerTitle2 {
+    font-size: 20px;
+  }
+
+  .headerTitle1 {
+    padding-top: 7px;
+  }
+}
+
 .logo {
   display: inline;
   position: absolute;
