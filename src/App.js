@@ -45,6 +45,10 @@ class App extends React.Component {
 
   resetCurrentWeek() {
     let currentDate = new Date();
+    if (currentDate.getDay() === 0) {
+      //evita la domenica di passare subito alla settimana successiva
+      currentDate = this.decreaseDays(currentDate, 1);
+    }
     let currentDayOfWeek = currentDate.getDay();
     let currentDayOfMonth = currentDate.getDate();
 
