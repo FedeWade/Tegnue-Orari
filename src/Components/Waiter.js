@@ -27,7 +27,7 @@ class Waiter extends React.Component {
     else if (name === "Cesare") return "#f2c40d";
     else if (name === "Raluca") return "#006e0f";
     else if (name === "Eleonora") return "#cb42f5";
-    else if (name === "Bibbò") return "#c1502e";
+    else if (name === "Bibbò") return "#004080";
   }
 
   render() {
