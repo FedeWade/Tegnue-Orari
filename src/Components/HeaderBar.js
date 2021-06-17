@@ -1,6 +1,6 @@
 import "./HeaderBar.css";
 import React from "react";
-import Logo from "../logotegnuebgg.png";
+import Logo from "../android-chrome-192x192.png";
 
 class HeaderBar extends React.Component {
   render() {
