@@ -29,6 +29,8 @@ class App extends React.Component {
     this.resetCurrentWeek = this.resetCurrentWeek.bind(this);
     this.checkErrorScreen = this.checkErrorScreen.bind(this);
     this.disableEmptyDayNavBar = this.disableEmptyDayNavBar.bind(this);
+    this.goToToday = this.goToToday.bind(this);
+    this.colorToday = this.colorToday.bind(this);
 
     this.resetCurrentWeek();
 
@@ -126,6 +128,35 @@ class App extends React.Component {
       else if (window.pageYOffset <= 75)
         this.setState({ stickWeekBar: "standard" });
     });
+
+    this.colorToday();
+  }
+
+  colorToday() {
+    var today = new Date().getDay();
+    var button = document.getElementById("nav1");
+    if (!this.state.showingNextWeek) {
+      button = document.getElementById("nav" + today);
+      button.style.textDecoration = "underline cyan";
+    }
+  }
+
+  goToToday() {
+    var elmnt = document.getElementById(
+      this.getCurrentDay(new Date().getDay())
+    );
+    if (!elmnt) return;
+    elmnt.scrollIntoView();
+  }
+
+  getCurrentDay(day) {
+    if (day === 0) return "Domenica";
+    if (day === 1) return "Lunedi";
+    if (day === 2) return "Martedi";
+    if (day === 3) return "Mercoledi";
+    if (day === 4) return "Giovedi";
+    if (day === 5) return "Venerdì";
+    if (day === 6) return "Sabato";
   }
 
   addDays(date, days) {
@@ -293,8 +324,12 @@ class App extends React.Component {
         </div>
 
         <HeaderBar></HeaderBar>
-
         <div className="tablesWrapper">
+          <button id="todayButton" onClick={() => this.goToToday()}>
+            <span className="arrow">&darr;</span> Vai ad oggi{" "}
+            <span className="arrow">&darr;</span>
+          </button>
+
           <SingleDayTable
             day="Lunedì"
             date={this.state.currentWeek[0].getDate()}
