@@ -202,7 +202,6 @@ class App extends React.Component {
     this.setState({ showingNextWeek: false });
     document.getElementById("currentWeek").disabled = true;
     document.getElementById("nextWeek").disabled = false;
-
     let newWeek = [];
     newWeek.push(this.decreaseDays(this.state.currentWeek[0], 7));
     newWeek.push(this.decreaseDays(this.state.currentWeek[1], 7));
@@ -233,6 +232,8 @@ class App extends React.Component {
       !this.state.sabatoSprints.length &&
       !this.state.domenicaSprints.length
     ) {
+      document.getElementById("todayButton").style.display = "none";
+
       return (
         <div className="errorWrapper">
           <img
@@ -248,6 +249,8 @@ class App extends React.Component {
         </div>
       );
     }
+    let todayb = document.getElementById("todayButton");
+    if (todayb) todayb.style.display = "inline";
   }
 
   disableEmptyDayNavBar() {
