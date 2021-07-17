@@ -39,7 +39,7 @@ button {
 #nav4,
 #nav5,
 #nav6,
-#nav7 {
+#nav0 {
   background-color: rgb(51, 51, 51);
   color: white;
   border: 1px solid rgb(51, 51, 51);
@@ -82,7 +82,7 @@ button:active,
 #nav4:active,
 #nav5:active,
 #nav6:active,
-#nav7:active {
+#nav0:active {
   background-color: black;
   border-color: black;
 }
@@ -93,7 +93,7 @@ button:active,
 #nav4:disabled,
 #nav5:disabled,
 #nav6:disabled,
-#nav7:disabled {
+#nav0:disabled {
   opacity: 0.55;
   cursor: not-allowed;
 }
@@ -104,7 +104,7 @@ button:active,
 #nav4.nowActive,
 #nav5.nowActive,
 #nav6.nowActive,
-#nav7.nowActive {
+#nav0.nowActive {
   background-color: rgb(255, 255, 255);
   border-color: white;
   color: rgb(41, 40, 40);

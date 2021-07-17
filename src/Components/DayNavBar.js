@@ -135,7 +135,7 @@ class DayNavBar extends React.Component {
           <li>
             <button
               className={this.state.domenicaVisibility}
-              id="nav7"
+              id="nav0"
               onClick={() => {
                 var elmnt = document.getElementById("Domenica");
                 if (!elmnt) return;

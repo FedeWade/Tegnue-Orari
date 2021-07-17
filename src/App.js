@@ -290,10 +290,10 @@ class App extends React.Component {
       else nav6.disabled = false;
     }
 
-    let nav7 = document.getElementById("nav7");
-    if (nav7) {
-      if (!this.state.domenicaSprints.length) nav7.disabled = true;
-      else nav7.disabled = false;
+    let nav0 = document.getElementById("nav0");
+    if (nav0) {
+      if (!this.state.domenicaSprints.length) nav0.disabled = true;
+      else nav0.disabled = false;
     }
   }
 
