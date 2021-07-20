@@ -151,10 +151,10 @@ class App extends React.Component {
 
   getCurrentDay(day) {
     if (day === 0) return "Domenica";
-    if (day === 1) return "Lunedi";
-    if (day === 2) return "Martedi";
-    if (day === 3) return "Mercoledi";
-    if (day === 4) return "Giovedi";
+    if (day === 1) return "Lunedì";
+    if (day === 2) return "Martedì";
+    if (day === 3) return "Mercoledì";
+    if (day === 4) return "Giovedì";
     if (day === 5) return "Venerdì";
     if (day === 6) return "Sabato";
   }
