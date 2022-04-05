@@ -128,16 +128,28 @@ class App extends React.Component {
       else if (window.pageYOffset <= 75)
         this.setState({ stickWeekBar: "standard" });
     });
+  }
 
+  componentDidUpdate() {
     this.colorToday();
+    this.goToTodayManager();
+  }
+
+  goToTodayManager() {
+    if (this.state.showingNextWeek)
+      document.getElementById("todayButton").style.display = "none";
+    else document.getElementById("todayButton").style.display = "inline-block";
   }
 
   colorToday() {
     var today = new Date().getDay();
-    var button = document.getElementById("nav1");
+    var button;
     if (!this.state.showingNextWeek) {
       button = document.getElementById("nav" + today);
       button.style.textDecoration = "underline cyan";
+    } else {
+      button = document.getElementById("nav" + today);
+      button.style.textDecoration = "none";
     }
   }
 
@@ -174,6 +186,7 @@ class App extends React.Component {
   changeToNextWeek() {
     if (this.state.showingNextWeek === true) return;
     this.setState({ showingNextWeek: true });
+
     document.getElementById("nextWeek").disabled = true;
     document.getElementById("currentWeek").disabled = false;
 
@@ -200,6 +213,7 @@ class App extends React.Component {
   changeToCurrentWeek() {
     if (this.state.showingNextWeek === false) return;
     this.setState({ showingNextWeek: false });
+
     document.getElementById("currentWeek").disabled = true;
     document.getElementById("nextWeek").disabled = false;
     let newWeek = [];
