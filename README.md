@@ -12,12 +12,10 @@ The page is designed mainly for mobile devices.
 This site was built using:
 - [React](https://reactjs.org/).
 - [Firebase](https://firebase.google.com/):
-  - [Firebase Realtime Database](https://firebase.google.com/docs/database) for back-end and database.
+  - [Firebase Realtime Database](https://firebase.google.com/docs/database) for back-end and JSON database.
   - [Firebase Hosting](https://firebase.google.com/docs/hosting) for hosting service.
 
 ## Screenshots
 
-<img src="Screenshots/ss1.jpg">
-<img src="Screenshots/ss2.jpg">
-<img src="Screenshots/ss3.jpg">
+<img width="200" src="Screenshots/ss1.jpg"> &ensp;&ensp;&ensp;&ensp; <img  width="200" src="Screenshots/ss2.jpg"> &ensp;&ensp;&ensp;&ensp; <img width="200" src="Screenshots/ss3.jpg">
 
