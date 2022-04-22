@@ -8,12 +8,16 @@ The page is designed mainly for mobile devices.
 
 **Link: <a href="https://orari-dd568.web.app/"> https://orari-dd568.web.app/ </a>**
 
+<br>
+
 ## Technologies
 This site was built using:
 - [React](https://reactjs.org/).
 - [Firebase](https://firebase.google.com/):
   - [Firebase Realtime Database](https://firebase.google.com/docs/database) for back-end and JSON database.
   - [Firebase Hosting](https://firebase.google.com/docs/hosting) for hosting service.
+
+<br>
 
 ## Screenshots
 
