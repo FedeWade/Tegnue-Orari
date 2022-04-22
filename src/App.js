@@ -3,6 +3,7 @@ import SingleDayTable from "./Components/SingleDayTable";
 import DayNavBar from "./Components/DayNavBar";
 import HeaderBar from "./Components/HeaderBar";
 import sorryF from "./sorry.jpg";
+import packageJson from "../package.json";
 
 import firebase from "firebase";
 import React from "react";
@@ -33,7 +34,6 @@ class App extends React.Component {
     this.colorToday = this.colorToday.bind(this);
 
     this.resetCurrentWeek();
-
     this.state.currentWeekBoundaries =
       this.state.currentWeek[0].getDate() +
       "-" +
