@@ -3,7 +3,6 @@ import SingleDayTable from "./Components/SingleDayTable";
 import DayNavBar from "./Components/DayNavBar";
 import HeaderBar from "./Components/HeaderBar";
 import sorryF from "./sorry.jpg";
-import packageJson from "../package.json";
 
 import firebase from "firebase";
 import React from "react";
@@ -47,10 +46,8 @@ class App extends React.Component {
 
   resetCurrentWeek() {
     let currentDate = new Date();
-    if (currentDate.getDay() === 0) {
-      //evita la domenica di passare subito alla settimana successiva
-      currentDate = this.decreaseDays(currentDate, 1);
-    }
+    let isSuday = currentDate.getDay() === 0;
+
     let currentDayOfWeek = currentDate.getDay();
     let currentDayOfMonth = currentDate.getDate();
 
@@ -75,6 +72,17 @@ class App extends React.Component {
     let sabato = new Date(
       new Date().setDate(currentDayOfMonth + (6 - currentDayOfWeek))
     );
+
+    //evita domenica di saltare settimana
+    if (isSuday) {
+      domenica = this.decreaseDays(domenica, 7);
+      lunedi = this.decreaseDays(lunedi, 7);
+      martedi = this.decreaseDays(martedi, 7);
+      mercoledi = this.decreaseDays(mercoledi, 7);
+      giovedi = this.decreaseDays(giovedi, 7);
+      venerdi = this.decreaseDays(venerdi, 7);
+      sabato = this.decreaseDays(sabato, 7);
+    }
     this.setState({ currentWeek: [] });
 
     this.state.currentWeek.push(lunedi);
