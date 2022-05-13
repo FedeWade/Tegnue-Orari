@@ -12,13 +12,12 @@ The page is designed mainly for mobile devices.
 
 ## Technologies
 This site was built using:
-- [React](https://reactjs.org/).
-- [Firebase](https://firebase.google.com/):
+- <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/2300px-React-icon.svg.png" width=20> [React](https://reactjs.org/).
+- <img src="https://raw.githubusercontent.com/devicons/devicon/1119b9f84c0290e0f0b38982099a2bd027a48bf1/icons/firebase/firebase-plain.svg" width=20> [Firebase](https://firebase.google.com/):
   - [Firebase Realtime Database](https://firebase.google.com/docs/database) for back-end and JSON database.
   - [Firebase Hosting](https://firebase.google.com/docs/hosting) for hosting service.
 
 <br>
-
 ## Screenshots
 
 <img width="200" src="Screenshots/ss1.jpg"> &ensp;&ensp;&ensp;&ensp; <img  width="200" src="Screenshots/ss2.jpg"> &ensp;&ensp;&ensp;&ensp; <img width="200" src="Screenshots/ss3.jpg">
