@@ -35,6 +35,10 @@ th {
   font-size: 17px;
 }
 
+.sprint18 {
+  border-top: 3px solid rgb(85, 85, 85);
+}
+
 @font-face {
   font-family: digital-7;
   src: url(../Fonts/digital-7mono.ttf);

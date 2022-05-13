@@ -26,16 +26,28 @@ class SingleDayTable extends React.Component {
           </tr>
 
           {this.props.sprints.map((sprint) => {
-            return (
-              <tr>
-                <th>{this.chiamata(sprint.hour)}</th>
-                <td>
-                  {sprint.waiters.map((waiter) => (
-                    <Waiter waiterName={waiter}></Waiter>
-                  ))}
-                </td>
-              </tr>
-            );
+            if (sprint.hour === "18:00") {
+              return (
+                <tr className="sprint18">
+                  <th>{this.chiamata(sprint.hour)}</th>
+                  <td>
+                    {sprint.waiters.map((waiter) => (
+                      <Waiter waiterName={waiter}></Waiter>
+                    ))}
+                  </td>
+                </tr>
+              );
+            } else
+              return (
+                <tr>
+                  <th>{this.chiamata(sprint.hour)}</th>
+                  <td>
+                    {sprint.waiters.map((waiter) => (
+                      <Waiter waiterName={waiter}></Waiter>
+                    ))}
+                  </td>
+                </tr>
+              );
           })}
         </table>
       </div>
