@@ -6,6 +6,7 @@ import sorryF from "./sorry.jpg";
 
 import firebase from "firebase";
 import React from "react";
+import Waiter from "./Components/Waiter";
 
 class App extends React.Component {
   constructor() {
@@ -23,6 +24,8 @@ class App extends React.Component {
       nextWeekBoundaries: "",
       showingNextWeek: false,
       stickWeekBar: "standard",
+      currentFilter: "",
+      filterClass: "filterWindowOut",
     };
     this.changeToNextWeek = this.changeToNextWeek.bind(this);
     this.changeToCurrentWeek = this.changeToCurrentWeek.bind(this);
@@ -31,6 +34,8 @@ class App extends React.Component {
     this.disableEmptyDayNavBar = this.disableEmptyDayNavBar.bind(this);
     this.goToToday = this.goToToday.bind(this);
     this.colorToday = this.colorToday.bind(this);
+    this.handleFilter = this.handleFilter.bind(this);
+    this.handleFilterButtonClick = this.handleFilterButtonClick.bind(this);
 
     this.resetCurrentWeek();
     this.state.currentWeekBoundaries =
@@ -319,6 +324,17 @@ class App extends React.Component {
     }
   }
 
+  handleFilter(waiter) {
+    this.setState({ currentFilter: waiter });
+    this.handleFilterButtonClick();
+  }
+
+  handleFilterButtonClick() {
+    if (this.state.filterClass === "filterWindowIn")
+      this.setState({ filterClass: "filterWindowOut" });
+    else this.setState({ filterClass: "filterWindowIn" });
+  }
+
   render() {
     return (
       <div className="app">
@@ -349,59 +365,164 @@ class App extends React.Component {
         </div>
 
         <HeaderBar></HeaderBar>
+
         <div className="tablesWrapper">
           <button id="todayButton" onClick={() => this.goToToday()}>
             <span className="arrow">&darr;</span> Vai ad oggi{" "}
             <span className="arrow">&darr;</span>
           </button>
-
           <SingleDayTable
             day="Lunedì"
             date={this.state.currentWeek[0].getDate()}
             sprints={this.state.lunediSprints}
+            filter={this.state.currentFilter}
           ></SingleDayTable>
-
           <SingleDayTable
             day="Martedì"
             date={this.state.currentWeek[1].getDate()}
             sprints={this.state.martediSprints}
+            filter={this.state.currentFilter}
           ></SingleDayTable>
-
           <SingleDayTable
             day="Mercoledì"
             date={this.state.currentWeek[2].getDate()}
             sprints={this.state.mercolediSprints}
+            filter={this.state.currentFilter}
           ></SingleDayTable>
-
           <SingleDayTable
             day="Giovedì"
             date={this.state.currentWeek[3].getDate()}
             sprints={this.state.giovediSprints}
+            filter={this.state.currentFilter}
           ></SingleDayTable>
-
           <SingleDayTable
             day="Venerdì"
             date={this.state.currentWeek[4].getDate()}
             sprints={this.state.venerdiSprints}
+            filter={this.state.currentFilter}
           ></SingleDayTable>
-
           <SingleDayTable
             day="Sabato"
             date={this.state.currentWeek[5].getDate()}
             sprints={this.state.sabatoSprints}
+            filter={this.state.currentFilter}
           ></SingleDayTable>
-
           <SingleDayTable
             day="Domenica"
             date={this.state.currentWeek[6].getDate()}
             sprints={this.state.domenicaSprints}
+            filter={this.state.currentFilter}
           ></SingleDayTable>
-
           {this.checkErrorScreen()}
         </div>
 
         <div className="copyContainer">
           <p className="copy"> Copyright &copy; Federico Ballarin</p>
+        </div>
+
+        <div className={this.state.filterClass}>
+          <h1 className="filterWindowTitle">Filtra:</h1>
+          <Waiter
+            waiterName="Federico"
+            filter="true"
+            onClick={() => this.handleFilter("Federico")}
+          ></Waiter>
+          <Waiter
+            waiterName="Michele"
+            filter="true"
+            onClick={() => this.handleFilter("Michele")}
+          ></Waiter>
+          <Waiter
+            waiterName="Modu"
+            filter="true"
+            onClick={() => this.handleFilter("Modu")}
+          ></Waiter>
+          <Waiter
+            waiterName="Luca"
+            filter="true"
+            onClick={() => this.handleFilter("Luca")}
+          ></Waiter>
+          <Waiter
+            waiterName="Valentina"
+            filter="true"
+            onClick={() => this.handleFilter("Valentina")}
+          ></Waiter>
+          <Waiter
+            waiterName="Lucio"
+            filter="true"
+            onClick={() => this.handleFilter("Lucio")}
+          ></Waiter>
+          <Waiter
+            waiterName="Hamza"
+            filter="true"
+            onClick={() => this.handleFilter("Hamza")}
+          ></Waiter>
+          <Waiter
+            waiterName="Fallou"
+            filter="true"
+            onClick={() => this.handleFilter("Fallou")}
+          ></Waiter>
+          <Waiter
+            waiterName="Danilo"
+            filter="true"
+            onClick={() => this.handleFilter("Danilo")}
+          ></Waiter>
+          <Waiter
+            waiterName="Michelle"
+            filter="true"
+            onClick={() => this.handleFilter("Michelle")}
+          ></Waiter>
+          <Waiter
+            waiterName="Nadir"
+            filter="true"
+            onClick={() => this.handleFilter("Nadir")}
+          ></Waiter>
+          <Waiter
+            waiterName="Ridha"
+            filter="true"
+            onClick={() => this.handleFilter("Ridha")}
+          ></Waiter>
+          <Waiter
+            waiterName="Gabriele"
+            filter="true"
+            onClick={() => this.handleFilter("Gabriele")}
+          ></Waiter>
+
+          <button
+            className="removeFilterButton"
+            onClick={() => this.handleFilter("")}
+          >
+            <span className="xClass">&#10006;</span>Rimuovi filtri
+          </button>
+        </div>
+        <div className="bottomBar">
+          <button
+            className="filterButton"
+            on
+            onClick={() => {
+              this.handleFilterButtonClick();
+            }}
+          >
+            <span
+              className={
+                this.state.filterClass === "filterWindowIn"
+                  ? "showA"
+                  : "noshowA"
+              }
+            >
+              &#8810;
+            </span>
+            Filtra
+            <span
+              className={
+                this.state.filterClass === "filterWindowIn"
+                  ? "noshowA"
+                  : "showA"
+              }
+            >
+              &#8811;
+            </span>
+          </button>
         </div>
         {this.disableEmptyDayNavBar()}
       </div>

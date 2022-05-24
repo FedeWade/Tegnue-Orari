@@ -54,7 +54,7 @@ class DayNavBar extends React.Component {
     return (
       <div className="navBarWrapper">
         <ul className="navBar">
-          <li>
+          <li className="sDay">
             <button
               className={this.state.lunediVisibility}
               id="nav1"
@@ -67,7 +67,7 @@ class DayNavBar extends React.Component {
               Lun {this.props.currentWeek[0].getDate()}
             </button>
           </li>
-          <li>
+          <li className="sDay">
             <button
               className={this.state.martediVisibility}
               id="nav2"
@@ -80,7 +80,7 @@ class DayNavBar extends React.Component {
               Mar {this.props.currentWeek[1].getDate()}
             </button>
           </li>
-          <li>
+          <li className="sDay">
             <button
               className={this.state.mercolediVisibility}
               id="nav3"
@@ -93,7 +93,7 @@ class DayNavBar extends React.Component {
               Mer {this.props.currentWeek[2].getDate()}
             </button>
           </li>
-          <li>
+          <li className="sDay">
             <button
               className={this.state.giovediVisibility}
               id="nav4"
@@ -106,7 +106,7 @@ class DayNavBar extends React.Component {
               Gio {this.props.currentWeek[3].getDate()}
             </button>
           </li>
-          <li>
+          <li className="sDay">
             <button
               className={this.state.venerdiVisibility}
               id="nav5"
@@ -119,7 +119,7 @@ class DayNavBar extends React.Component {
               Ven {this.props.currentWeek[4].getDate()}
             </button>
           </li>
-          <li>
+          <li className="sDay">
             <button
               className={this.state.sabatoVisibility}
               id="nav6"
@@ -132,7 +132,7 @@ class DayNavBar extends React.Component {
               Sab {this.props.currentWeek[5].getDate()}
             </button>
           </li>
-          <li>
+          <li className="sDay">
             <button
               className={this.state.domenicaVisibility}
               id="nav0"

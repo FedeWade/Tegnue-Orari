@@ -4,7 +4,7 @@
 }
 
 table {
-  min-width: 240px;
+  width: 240px;
   border-collapse: collapse;
   border-spacing: 0;
   box-shadow: 0 2px 15px rgba(0, 0, 0, 0.9);
@@ -30,13 +30,13 @@ th {
   border: 0px solid rgb(85, 85, 85);
   text-align: center;
   color: black;
-  padding: 5px 0;
+  padding: 8px 3px;
   font-family: cairo;
   font-size: 17px;
 }
 
 .sprint18 {
-  border-top: 3px solid rgb(85, 85, 85);
+  border-top: 3px solid rgb(51, 51, 51);
 }
 
 @font-face {
@@ -63,6 +63,7 @@ th {
 th {
   font-family: digital-7;
   font-size: 30px;
+  padding: 0 10px;
 }
 
 tr {

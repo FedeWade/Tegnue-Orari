@@ -60,3 +60,21 @@
   height: 70px;
   margin-top: 3px;
 }
+
+.show {
+  display: inline;
+  position: fixed;
+  width: 75px;
+  margin-top: 200px;
+  transition: 1s;
+  left: 0;
+}
+
+.noshow {
+  display: inline;
+  position: fixed;
+  left: -200px;
+  width: 75px;
+  margin-top: 200px;
+  transition: 8s;
+}

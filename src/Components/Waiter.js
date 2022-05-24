@@ -15,9 +15,9 @@ class Waiter extends React.Component {
   }
 
   getBgColor(name) {
+    //#004080"girl color
     if (name === "Michele") return "#FF7F50";
     else if (name === "Modu") return "#4242f0";
-    else if (name === "Francesco") return "#85144b";
     else if (name === "Luca") return "#c72e23";
     else if (name === "Valentina") return "#333333";
     else if (name === "Federico") return "#79c753";
@@ -27,16 +27,22 @@ class Waiter extends React.Component {
     else if (name === "Fallou") return "#b98a52";
     else if (name === "Danilo") return "#e59900";
     else if (name === "Michelle") return "#cb42f5";
-    else if (name === "Bibbò") return "#004080";
-    else if (name === "Nadir") return "#264E36";
+    else if (name === "Nadir") return "#85144b";
     else if (name === "Ridha") return "#00A170";
     else if (name === "Gabriele") return "#6B5876";
   }
 
   render() {
     this.setColor();
+
     return (
-      <p style={{ backgroundColor: this.state.bgColor }} className="waiter">
+      <p
+        style={{
+          backgroundColor: this.state.bgColor,
+        }}
+        className="waiter"
+        onClick={this.props.onClick}
+      >
         {this.props.waiterName}
       </p>
     );
