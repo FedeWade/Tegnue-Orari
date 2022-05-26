@@ -64,7 +64,11 @@ class DayNavBar extends React.Component {
                 elmnt.scrollIntoView();
               }}
             >
-              Lun {this.props.currentWeek[0].getDate()}
+              Lun
+              <br />
+              <span className="dayNumber">
+                {this.props.currentWeek[0].getDate()}
+              </span>
             </button>
           </li>
           <li className="sDay">
@@ -77,7 +81,11 @@ class DayNavBar extends React.Component {
                 elmnt.scrollIntoView();
               }}
             >
-              Mar {this.props.currentWeek[1].getDate()}
+              Mar
+              <br />
+              <span className="dayNumber">
+                {this.props.currentWeek[1].getDate()}
+              </span>
             </button>
           </li>
           <li className="sDay">
@@ -90,7 +98,11 @@ class DayNavBar extends React.Component {
                 elmnt.scrollIntoView();
               }}
             >
-              Mer {this.props.currentWeek[2].getDate()}
+              Mer
+              <br />
+              <span className="dayNumber">
+                {this.props.currentWeek[2].getDate()}
+              </span>
             </button>
           </li>
           <li className="sDay">
@@ -103,7 +115,11 @@ class DayNavBar extends React.Component {
                 elmnt.scrollIntoView();
               }}
             >
-              Gio {this.props.currentWeek[3].getDate()}
+              Gio
+              <br />
+              <span className="dayNumber">
+                {this.props.currentWeek[3].getDate()}
+              </span>
             </button>
           </li>
           <li className="sDay">
@@ -116,7 +132,11 @@ class DayNavBar extends React.Component {
                 elmnt.scrollIntoView();
               }}
             >
-              Ven {this.props.currentWeek[4].getDate()}
+              Ven
+              <br />
+              <span className="dayNumber">
+                {this.props.currentWeek[4].getDate()}
+              </span>
             </button>
           </li>
           <li className="sDay">
@@ -129,7 +149,11 @@ class DayNavBar extends React.Component {
                 elmnt.scrollIntoView();
               }}
             >
-              Sab {this.props.currentWeek[5].getDate()}
+              Sab
+              <br />
+              <span className="dayNumber">
+                {this.props.currentWeek[5].getDate()}
+              </span>
             </button>
           </li>
           <li className="sDay">
@@ -142,7 +166,11 @@ class DayNavBar extends React.Component {
                 elmnt.scrollIntoView();
               }}
             >
-              Dom {this.props.currentWeek[6].getDate()}
+              Dom
+              <br />
+              <span className="dayNumber">
+                {this.props.currentWeek[6].getDate()}
+              </span>
             </button>
           </li>
         </ul>

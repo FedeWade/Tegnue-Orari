@@ -1,11 +1,10 @@
 .navBarWrapper {
   position: fixed;
-  height: 97%;
-  width: 80px;
-  right: 0px;
-  text-align: center;
-  overflow: hidden;
+  height: 100%;
+  top: 0;
+  right: 0;
   z-index: 2;
+  padding: 0;
 }
 
 @media screen and (min-width: 580px) {
@@ -13,20 +12,33 @@
     display: none;
   }
 }
+.dayNumber {
+  font-size: 22px;
+}
 
 ul.navBar {
-  position: absolute;
-  right: 0;
   list-style-type: none;
   height: 100%;
-  margin-top: 20px;
-  text-align: right;
+  margin: 0;
+}
+ul {
+  display: table;
+}
+ul li {
+  display: table-row;
+  vertical-align: middle;
+  width: 100%;
+}
+
+ul li button {
+  /* assuming an anchor child.  Can be anything */
+  display: table-cell;
+  vertical-align: middle;
+  width: 60px;
+  height: 100%;
 }
 
 li.sDay {
-  text-align: right;
-  margin: auto;
-  height: 14%;
 }
 
 button {
@@ -42,21 +54,13 @@ button {
 #nav0 {
   background-color: rgb(51, 51, 51);
   color: white;
-  border: 1px solid rgb(51, 51, 51);
+  border: 0px solid rgb(51, 51, 51);
   border-right: 0;
-  border-radius: 15px 0 0 15px;
-  width: 65px;
-  height: 53px;
+
   text-decoration: none;
-  display: inline-block;
-  text-align: left;
-  line-height: 50px;
-  padding: 0;
-  padding-left: 4px;
-  right: 0px;
-  box-shadow: 2px 4px 2px 0 rgba(0, 0, 0, 0.4);
+
   transition: 0.25s;
-  font-size: 17px;
+  font-size: 14px;
   font-family: consola;
 }
 
@@ -106,15 +110,5 @@ button:active,
 #nav6.nowActive,
 #nav0.nowActive {
   background-color: rgb(255, 255, 255);
-  border-color: white;
   color: rgb(41, 40, 40);
-  box-shadow: 6px 12px 4px 0 rgba(0, 0, 0, 0.4);
-  height: 58px;
-  line-height: 56px;
-  font-size: 20px;
-  margin-top: -3px;
-  width: 75px;
-  padding: 0;
-  padding-left: 6px;
 }
-
