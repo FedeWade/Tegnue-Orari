@@ -26,6 +26,7 @@ class App extends React.Component {
       stickWeekBar: "standard",
       currentFilter: "",
       filterClass: "filterWindowOut",
+      filterButonClass: "filterButtonOut",
     };
     this.changeToNextWeek = this.changeToNextWeek.bind(this);
     this.changeToCurrentWeek = this.changeToCurrentWeek.bind(this);
@@ -331,8 +332,15 @@ class App extends React.Component {
 
   handleFilterButtonClick() {
     if (this.state.filterClass === "filterWindowIn")
-      this.setState({ filterClass: "filterWindowOut" });
-    else this.setState({ filterClass: "filterWindowIn" });
+      this.setState({
+        filterClass: "filterWindowOut",
+        filterButonClass: "filterButtonOut",
+      });
+    else
+      this.setState({
+        filterClass: "filterWindowIn",
+        filterButonClass: "filterButtonIn",
+      });
   }
 
   render() {
@@ -492,12 +500,12 @@ class App extends React.Component {
             className="removeFilterButton"
             onClick={() => this.handleFilter("")}
           >
-            <span className="xClass">&#10006;</span>Rimuovi filtri
+            <span className="xClass">&#10006;</span>Rimuovi filtro
           </button>
         </div>
         <div className="bottomBar">
           <button
-            className="filterButton"
+            className={this.state.filterButonClass}
             on
             onClick={() => {
               this.handleFilterButtonClick();
@@ -512,7 +520,7 @@ class App extends React.Component {
             >
               &#8810;
             </span>
-            Filtra
+            <span className="filterSpan">Filtra</span>
             <span
               className={
                 this.state.filterClass === "filterWindowIn"
@@ -522,6 +530,7 @@ class App extends React.Component {
             >
               &#8811;
             </span>
+            <Waiter waiterName={this.state.currentFilter}></Waiter>
           </button>
         </div>
         {this.disableEmptyDayNavBar()}
