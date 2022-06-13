@@ -160,10 +160,10 @@ class App extends React.Component {
     var button;
     if (!this.state.showingNextWeek) {
       button = document.getElementById("nav" + today);
-      button.style.textDecoration = "underline cyan";
+      button.style.border = "1.5px solid cyan";
     } else {
       button = document.getElementById("nav" + today);
-      button.style.textDecoration = "none";
+      button.style.border = "0";
     }
   }
 
@@ -461,9 +461,9 @@ class App extends React.Component {
             onClick={() => this.handleFilter("Lucio")}
           ></Waiter>
           <Waiter
-            waiterName="Hamza"
+            waiterName="Giulia"
             filter="true"
-            onClick={() => this.handleFilter("Hamza")}
+            onClick={() => this.handleFilter("Giulia")}
           ></Waiter>
           <Waiter
             waiterName="Fallou"
@@ -471,9 +471,9 @@ class App extends React.Component {
             onClick={() => this.handleFilter("Fallou")}
           ></Waiter>
           <Waiter
-            waiterName="Danilo"
+            waiterName="Michael"
             filter="true"
-            onClick={() => this.handleFilter("Danilo")}
+            onClick={() => this.handleFilter("Michael")}
           ></Waiter>
           <Waiter
             waiterName="Michelle"

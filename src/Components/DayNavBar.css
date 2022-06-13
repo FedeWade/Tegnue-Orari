@@ -1,10 +1,8 @@
 .navBarWrapper {
   position: fixed;
-  height: 100%;
-  top: 0;
-  right: 0;
+  bottom: 10px;
+  right: 5px;
   z-index: 2;
-  padding: 0;
 }
 
 @media screen and (min-width: 580px) {
@@ -13,32 +11,39 @@
   }
 }
 .dayNumber {
-  font-size: 22px;
+  font-size: 23px;
 }
 
 ul.navBar {
   list-style-type: none;
-  height: 100%;
-  margin: 0;
+  margin: auto;
+  bottom: 0;
+  width: 60px;
+  box-shadow: 3px 3px 8px 0 rgba(0, 0, 0, 0.609);
 }
 ul {
   display: table;
+  vertical-align: middle;
+  background-color: rgb(51, 51, 51);
+
+  padding: 10px 0;
+  border: 0 solid black;
+  border-radius: 12px 12px 12px 12px;
 }
 ul li {
   display: table-row;
   vertical-align: middle;
-  width: 100%;
+  background-color: rgb(51, 51, 51);
 }
 
 ul li button {
-  /* assuming an anchor child.  Can be anything */
   display: table-cell;
   vertical-align: middle;
-  width: 60px;
-  height: 100%;
-}
-
-li.sDay {
+  width: 55px;
+  height: 55px;
+  margin: 5px;
+  border: 0 solid white;
+  border-radius: 12px;
 }
 
 button {
@@ -55,12 +60,9 @@ button {
   background-color: rgb(51, 51, 51);
   color: white;
   border: 0px solid rgb(51, 51, 51);
-  border-right: 0;
-
   text-decoration: none;
-
   transition: 0.25s;
-  font-size: 14px;
+  font-size: 16px;
   font-family: consola;
 }
 
@@ -98,7 +100,7 @@ button:active,
 #nav5:disabled,
 #nav6:disabled,
 #nav0:disabled {
-  opacity: 0.55;
+  opacity: 0.15;
   cursor: not-allowed;
 }
 
@@ -109,6 +111,6 @@ button:active,
 #nav5.nowActive,
 #nav6.nowActive,
 #nav0.nowActive {
-  background-color: rgb(255, 255, 255);
-  color: rgb(41, 40, 40);
+  background-color: rgba(0, 255, 255, 0.25);
+  color: cyan;
 }

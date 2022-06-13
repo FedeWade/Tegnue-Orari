@@ -17,7 +17,7 @@ body {
 }
 .tablesWrapper {
   margin-top: 40px;
-  margin-right: 80px;
+  margin-right: 70px;
   padding-bottom: 50px;
   text-align: center;
 }
@@ -31,14 +31,14 @@ body {
 
 #weekBar {
   top: 0;
-  left: 0;
+  right: 0;
   text-align: left;
 }
 
 .standard {
   position: absolute;
   margin-top: 75px;
-  left: 0;
+  right: 0;
 }
 
 .sticky {
@@ -78,17 +78,10 @@ body {
   border-radius: 15px;
   background-color: rgb(255, 255, 255);
   padding: 10px;
-  max-width: 80%;
   margin: auto;
   margin-top: 80px;
   box-shadow: 3px 3px 8px 0 rgba(0, 0, 0, 0.7);
   max-width: 300px;
-}
-
-@media screen and (max-width: 420px) {
-  .errorWrapper {
-    margin-left: 15px;
-  }
 }
 
 .errorMessage {
@@ -187,7 +180,6 @@ body {
   text-decoration: none;
   font-size: 17px;
   font-family: consola;
-  border-radius: 0 15px 0 0;
   padding: 8px 5px 15px 5px;
 }
 
@@ -202,7 +194,6 @@ body {
   text-decoration: none;
   font-size: 17px;
   font-family: consola;
-  border-radius: 0 0 0 0;
   padding: 8px 0 15px 15px;
   width: 85%;
   box-shadow: 0 2px 15px rgba(0, 0, 0, 0.9);
@@ -236,11 +227,11 @@ body {
 .removeFilterButton {
   color: black;
   background-color: white;
-  border: 2px solid red;
-  border-radius: 3px;
+  border: 0px solid red;
+  border-radius: 20px;
   margin: auto;
   margin-top: 15px;
-  font-size: 19px;
+  font-size: 22px;
   text-align: center;
   display: block;
   padding: 2px 8px;

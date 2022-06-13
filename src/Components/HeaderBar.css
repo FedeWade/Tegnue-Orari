@@ -1,11 +1,9 @@
 .headerWrapper {
   margin: 0px;
-  margin-right: 80px;
   height: 75px;
   background-color: rgb(51, 51, 51);
   text-align: center;
   position: relative;
-  border-radius: 0 0 40px 0;
 }
 
 @font-face {
@@ -18,7 +16,6 @@
   color: white;
   top: 0;
   margin: auto;
-  margin-left: 70px;
   font-size: 25px;
   font-family: lemondrop;
   text-align: center;
