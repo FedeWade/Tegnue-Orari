@@ -471,9 +471,9 @@ class App extends React.Component {
             onClick={() => this.handleFilter("Fallou")}
           ></Waiter>
           <Waiter
-            waiterName="Michael"
+            waiterName="Maikel"
             filter="true"
-            onClick={() => this.handleFilter("Michael")}
+            onClick={() => this.handleFilter("Maikel")}
           ></Waiter>
           <Waiter
             waiterName="Michelle"
