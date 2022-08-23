@@ -2,6 +2,7 @@ import "./App.css";
 import SingleDayTable from "./Components/SingleDayTable";
 import DayNavBar from "./Components/DayNavBar";
 import HeaderBar from "./Components/HeaderBar";
+import GoogleSquareAd from "./Components/GoogleSquareAd";
 import sorryF from "./sorry.jpg";
 
 import firebase from "firebase";
@@ -379,6 +380,7 @@ class App extends React.Component {
             <span className="arrow">&darr;</span> Vai ad oggi{" "}
             <span className="arrow">&darr;</span>
           </button>
+
           <SingleDayTable
             day="Lunedì"
             date={this.state.currentWeek[0].getDate()}
@@ -425,7 +427,9 @@ class App extends React.Component {
         </div>
 
         <div className="copyContainer">
-          <p className="copy"> Copyright &copy; Federico Ballarin</p>
+          <p className="copy">
+            Copyright &copy; Federico Ballarin {new Date().getFullYear()}
+          </p>
         </div>
 
         <div className={this.state.filterClass}>
@@ -466,14 +470,9 @@ class App extends React.Component {
             onClick={() => this.handleFilter("Giulia")}
           ></Waiter>
           <Waiter
-            waiterName="Fallou"
+            waiterName="Leonardo"
             filter="true"
-            onClick={() => this.handleFilter("Fallou")}
-          ></Waiter>
-          <Waiter
-            waiterName="Maikel"
-            filter="true"
-            onClick={() => this.handleFilter("Maikel")}
+            onClick={() => this.handleFilter("Leonardo")}
           ></Waiter>
           <Waiter
             waiterName="Michelle"
